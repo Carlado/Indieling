@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import Topbar from './navbar'
+import Topbar from './topbar'
 
 
 class App extends Component {

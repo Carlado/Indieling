@@ -2,7 +2,9 @@ import React from 'react';
 
 const Topbar = () => {
   return (
-    <div>Header area..</div>
+    <div className="topbar">
+      Indieling
+    </div>
   );
 };
 

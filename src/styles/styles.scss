@@ -1,3 +1,30 @@
+//Variables
+$theme: #27ae60;
+
+//General
+html {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+//Topbar
+.topbar {
+  height: 40px;
+  background: $theme;
+  color: white;
+  text-align: center;
+  line-height: 40px;
 }
