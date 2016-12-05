@@ -1,11 +1,11 @@
 import React, {Component, PropTypes} from 'react';
+import Topbar from './navbar'
 
 
 class App extends Component {
   render() {
     return (
-      <div>Hi</div>
-
+      <Topbar />
     );
   }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Header = () => {
+const Topbar = () => {
   return (
     <div>Header area..</div>
   );
-}
+};
 
-export default Header;
+export default Topbar;
