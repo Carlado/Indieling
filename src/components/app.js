@@ -5,7 +5,11 @@ import Topbar from './topbar'
 class App extends Component {
   render() {
     return (
-      <Topbar />
+      <div>
+        <Topbar />
+        {this.props.children}
+      </div>  
+
     );
   }
 }
