@@ -13,11 +13,13 @@ class SearchBar extends Component {
 
   onInputChange(event) {
     this.setState({term: event.target.value});
-    this.props.getAutoComplete(this.state.term);
   }
 
   onFormSubmit(event) {
     event.preventDefault();
+    if (this.state.term.length > 2) {
+      this.props.getAutoComplete(this.state.term);
+    }
   }
 
   render() {
