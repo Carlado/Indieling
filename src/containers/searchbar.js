@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {getAutoComplete} from '../actions/searchActions';
 
 
-export default class SearchBar extends Component {
+class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {term: ''};
@@ -11,6 +13,7 @@ export default class SearchBar extends Component {
 
   onInputChange(event) {
     this.setState({term: event.target.value});
+    this.props.getAutoComplete(this.state.term);
   }
 
   onFormSubmit(event) {
@@ -28,3 +31,5 @@ export default class SearchBar extends Component {
 
   }
 }
+
+export default connect(null, {getAutoComplete})(SearchBar);

@@ -8,7 +8,7 @@ class App extends Component {
       <div>
         <Topbar />
         {this.props.children}
-      </div>  
+      </div>
 
     );
   }

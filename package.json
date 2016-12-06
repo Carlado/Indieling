@@ -29,13 +29,16 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "axios": "0.15.3",
     "object-assign": "4.1.0",
     "react": "15.3.2",
     "react-dom": "15.3.2",
+    "react-fontawesome": "1.4.0",
     "react-redux": "4.4.5",
     "react-router": "2.8.1",
     "react-router-redux": "4.0.6",
     "redux": "3.6.0",
+    "redux-promise": "0.5.3",
     "redux-thunk": "2.1.0"
   },
   "devDependencies": {

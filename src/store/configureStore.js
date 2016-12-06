@@ -1,12 +1,13 @@
 import {createStore, compose, applyMiddleware} from 'redux';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
+import reduxPromise from 'redux-promise';
 import rootReducer from '../reducers';
 
 function configureStoreProd(initialState) {
   const middlewares = [
     // Add other middleware on this line...
-
+    reduxPromise,
     // thunk middleware can also accept an extra argument to be passed to each thunk action
     // https://github.com/gaearon/redux-thunk#injecting-a-custom-argument
     thunk,

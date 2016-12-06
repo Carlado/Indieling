@@ -29,6 +29,9 @@ node_modules
 #dist folder
 dist
 
+#config file
+/src/constants/config.js
+
 # IDEA/Webstorm project files
 .idea
 *.iml
