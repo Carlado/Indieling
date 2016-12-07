@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import SearchTracks from '../components/SearchTracks';
+import SearchArtists from '../components/SearchArtists';
 
 
 class SearchResults extends Component {
   render() {
     return (
       <div>
-        <SearchTracks tracks={this.props.searchresults}/>
+        <SearchTracks tracks={this.props.trackresults}/>
+        <SearchArtists artists={this.props.artistresults}/>
       </div>
     );
   }
@@ -16,7 +18,8 @@ class SearchResults extends Component {
 
 function mapStatetoProps(state) {
   return {
-    searchresults: state.search
+    trackresults: state.trackSearch,
+    artistresults: state.artistSearch
   };
 }
 

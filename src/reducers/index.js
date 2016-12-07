@@ -1,11 +1,13 @@
 // Set up your root reducer here...
 import { combineReducers } from 'redux';
 import {routerReducer} from 'react-router-redux';
-import searchReducer from './searchReducer';
+import artistSearchReducer from './artistSearchReducer';
+import trackSearchReducer from './trackSearchReducer'
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  search: searchReducer
+  artistSearch: artistSearchReducer,
+  trackSearch: trackSearchReducer
 
 });
 

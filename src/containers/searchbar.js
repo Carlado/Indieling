@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {getTracks} from '../actions/searchActions';
+import {getTracks, getArtists} from '../actions/searchActions';
 
 
 class SearchBar extends Component {
@@ -19,6 +19,7 @@ class SearchBar extends Component {
     event.preventDefault();
     if (this.state.term.length > 2) {
       this.props.getTracks(this.state.term);
+      this.props.getArtists(this.state.term);
     }
   }
 
@@ -34,4 +35,4 @@ class SearchBar extends Component {
   }
 }
 
-export default connect(null, {getTracks})(SearchBar);
+export default connect(null, {getTracks, getArtists})(SearchBar);
