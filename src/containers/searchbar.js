@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {getAutoComplete} from '../actions/searchActions';
+import {getTracks} from '../actions/searchActions';
 
 
 class SearchBar extends Component {
@@ -18,7 +18,7 @@ class SearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
     if (this.state.term.length > 2) {
-      this.props.getAutoComplete(this.state.term);
+      this.props.getTracks(this.state.term);
     }
   }
 
@@ -34,4 +34,4 @@ class SearchBar extends Component {
   }
 }
 
-export default connect(null, {getAutoComplete})(SearchBar);
+export default connect(null, {getTracks})(SearchBar);

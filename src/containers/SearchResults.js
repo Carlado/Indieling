@@ -7,8 +7,7 @@ class SearchResults extends Component {
   render() {
     return (
       <div>
-                  <SearchTracks tracks={this.props}/>
-
+        <SearchTracks tracks={this.props.searchresults}/>
       </div>
     );
   }
@@ -17,7 +16,7 @@ class SearchResults extends Component {
 
 function mapStatetoProps(state) {
   return {
-    searchresults: state.autocomplete
+    searchresults: state.search
   };
 }
 

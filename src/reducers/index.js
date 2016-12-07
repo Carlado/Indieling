@@ -5,7 +5,7 @@ import searchReducer from './searchReducer';
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  autocomplete: searchReducer
+  search: searchReducer
 
 });
 
