@@ -6,7 +6,8 @@ const Topbar = () => {
   return (
     <div className="topbar">
       <ul className="nav-items">
-        <li><IndexLink to="/" activeClassName="active"><FontAwesome className="nav-icon" name="home" size="lg"/>Indieling</IndexLink></li>
+        <li><IndexLink to="/" activeClassName="active"><FontAwesome className="nav-icon" name="leaf" size="lg"/>Artists</IndexLink></li>
+
         <li><Link to="/search" activeClassName="active"><FontAwesome className="nav-icon" name="search" size="lg"/>Search</Link></li>
       </ul>
 

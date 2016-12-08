@@ -7,18 +7,18 @@ const KEY = config.KEY;
 const FORMAT = 'format=json';
 
 
-export function getTracks(term) {
+export function searchGetTracks(term) {
   const request = axios.get(`${ROOT_URL}tracks/?client_id=${KEY}&${FORMAT}&limit=20&namesearch=${term}`);
   return {
-    type: types.GET_TRACKS,
+    type: types.SEARCH_GET_TRACKS,
     payload: request
   };
 }
 
-export function getArtists(term) {
+export function searchGetArtists(term) {
   const request = axios.get(`${ROOT_URL}artists/?client_id=${KEY}&${FORMAT}&limit=10&namesearch=${term}`);
   return {
-    type: types.GET_ARTISTS,
+    type: types.SEARCH_GET_ARTISTS,
     payload: request
   }
 }

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {getTracks, getArtists} from '../actions/searchActions';
+import {searchGetTracks, searchGetArtists} from '../actions/searchActions';
 
 
 class SearchBar extends Component {
@@ -18,8 +18,8 @@ class SearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
     if (this.state.term.length > 2) {
-      this.props.getTracks(this.state.term);
-      this.props.getArtists(this.state.term);
+      this.props.searchGetTracks(this.state.term);
+      this.props.searchGetArtists(this.state.term);
     }
   }
 
@@ -35,4 +35,4 @@ class SearchBar extends Component {
   }
 }
 
-export default connect(null, {getTracks, getArtists})(SearchBar);
+export default connect(null, {searchGetTracks, searchGetArtists})(SearchBar);
