@@ -1,10 +1,12 @@
 //Variables
-$theme: #364F6B;
+$theme: #22313F;
+$details: #27ae60;
 
 //General
 html {
   box-sizing: border-box;
   font-size: 16px;
+  font-family: 'Lato', sans-serif;
 }
 
 html,
@@ -26,8 +28,37 @@ body {
   height: 50px;
   background: $theme;
   color: white;
-  text-align: center;
   line-height: 50px;
+}
+
+.nav-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  li {
+    flex-grow: 1;
+    .nav-icon {
+      margin-right: 10px;
+    }
+  }
+  a, a:visited {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s;
+    &:hover {
+      background: $details;
+    }
+  }
+  .active {
+    background: $details;
+  }
 }
 
 
