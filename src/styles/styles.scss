@@ -1,6 +1,7 @@
 //Variables
-$theme: #22313F;
-$details: #27ae60;
+$theme: #14181d;
+$details: #00ADB5;
+$silver: #222831;
 
 //General
 html {
@@ -22,6 +23,27 @@ body {
   box-sizing: inherit;
 }
 
+.view-heading {
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  padding-top: 20px;
+  font-weight: 300;
+  font-size: 120%;
+}
+
+.app-window {
+  background: $silver;
+}
+
+.time-dropdown {
+  background: $silver;
+  color: white;
+  border: 0;
+  margin-left: 3px;
+  font-size: 90%;
+  font-weight: 300;
+}
 
 //Topbar
 .topbar {
@@ -72,5 +94,32 @@ body {
     border-bottom: 2px solid $theme;
     padding: 10px;
     font-size: 130%;
+  }
+}
+
+//Artists
+
+.artist-list {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: white;
+  li {
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    margin: 20px;
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 2px;
+    }
+    p {
+      font-weight: 300;
+      font-size: 110%;
+    }
   }
 }

@@ -7,7 +7,9 @@ class App extends Component {
     return (
       <div>
         <Topbar />
-        {this.props.children}
+        <div className="app-window">
+          {this.props.children}
+        </div>
       </div>
 
     );

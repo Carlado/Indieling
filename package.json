@@ -1,6 +1,6 @@
 {
   "name": "Indieling",
-  "version": "5.0.0",
+  "version": "1.0.0",
   "description": "Music app for independent music",
   "engines": {
     "npm": ">=3"
