@@ -2,6 +2,7 @@
 $theme: #14181d;
 $details: #00ADB5;
 $silver: #222831;
+$clouds: #ecf0f1;
 
 //General
 html {
@@ -25,7 +26,7 @@ body {
 
 .view-heading {
   text-align: center;
-  color: white;
+  color: $clouds;
   margin-top: 0;
   padding-top: 20px;
   font-weight: 300;
@@ -34,22 +35,25 @@ body {
 
 .app-window {
   background: $silver;
+  min-height: 100vh;
 }
 
 .time-dropdown {
   background: $silver;
   color: white;
-  border: 0;
-  margin-left: 3px;
+  border: 1px solid $details;
   font-size: 90%;
-  font-weight: 300;
+  border-radius: 2px;
+  padding: 1px 2px;
+  margin: 0 1px;
+
 }
 
 //Topbar
 .topbar {
   height: 50px;
   background: $theme;
-  color: white;
+  color: $clouds;
   line-height: 50px;
 }
 
@@ -121,5 +125,27 @@ body {
       font-weight: 300;
       font-size: 110%;
     }
+  }
+}
+
+//Tracks
+.tracks-list {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.track {
+  color: $clouds;
+  border-bottom: 1px solid $details;
+  padding: 10px 0;
+  .trackname {
+    font-size: 120%;
+    font-weight: 300;
+    margin: 0;
+  }
+  .trackartist {
+    font-size: 90%;
+    margin: 0;
   }
 }
