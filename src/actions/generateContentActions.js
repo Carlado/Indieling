@@ -29,3 +29,11 @@ export function getAlbums(duration) {
     payload: request
   }
 }
+
+export function getArtistTracks(id) {
+  const request = axios.get(`${ROOT_URL}artists/tracks/?client_id=${KEY}&${FORMAT}&limit=10&id=${id}&order=popularity_total`);
+  return {
+    type: types.GET_ARTIST_TRACKS,
+    payload: request
+  }
+}

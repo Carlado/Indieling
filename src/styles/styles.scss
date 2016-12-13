@@ -33,6 +33,28 @@ body {
   font-size: 120%;
 }
 
+.content-heading {
+  color: $clouds;
+  margin: 0;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.content-image {
+  border-radius: 2px;
+  width: 100px;
+  height: auto;
+}
+
+.content-top-box {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
 .app-window {
   background: $silver;
   min-height: 100vh;
@@ -110,12 +132,16 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 10px;
-  color: white;
+  color: $clouds;
   li {
     display: inline-block;
     width: 200px;
     height: 250px;
     margin: 20px;
+    a, a:visited {
+      text-decoration: none;
+      color: $clouds;
+    }
     img {
       width: 200px;
       height: 200px;
@@ -137,8 +163,28 @@ body {
 
 .track {
   color: $clouds;
-  border-bottom: 1px solid $details;
+  border-bottom: 1px solid #536177;
   padding: 10px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  img {
+    height: 60px;
+    width: auto;
+  }
+  span {
+    position: absolute;
+    top: 25px;
+    left: 19px;
+    color: $details;
+    &:hover {
+      color: #e74c3c;
+    }
+  }
+  div {
+    display: inline-block;
+    padding-left: 30px;
+  }
   .trackname {
     font-size: 120%;
     font-weight: 300;

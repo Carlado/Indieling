@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-
+import FontAwesome from 'react-fontawesome';
 import {getTracks} from '../actions/generateContentActions';
 
 import Dropdown from './TimeDropdown';
@@ -14,8 +14,13 @@ class Tracks extends Component {
     return this.props.tracks.results.map((track) => {
       return (
         <li key={track.id} className="track">
-          <p className="trackname">{track.name}</p>
-          <p className="trackartist">{track.artist_name}</p>
+          <img src={track.album_image} />
+          <FontAwesome className="nav-icon" name="play" size="2x"/>
+          <div>
+            <p className="trackname">{track.name}</p>
+            <p className="trackartist">{track.artist_name}</p>
+          </div>
+
         </li>
       );
     });

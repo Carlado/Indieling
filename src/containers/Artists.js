@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-
 import {getArtists} from '../actions/generateContentActions';
-
+import { Link } from 'react-router';
 import Dropdown from './TimeDropdown';
 
 class Artists extends Component {
@@ -14,9 +13,14 @@ class Artists extends Component {
     return this.props.artists.results.map((artist) => {
       return (
         <li key={artist.id}>
-          {artist.image ? <img src={artist.image} /> : <img src={require('../images/album.jpg')} />}
+          <Link to={'/artist/' + artist.id} >
+            <div className="artistbox">
+            {artist.image ? <img src={artist.image} /> : <img src={require('../images/album.jpg')} />}
 
-          <p>{artist.name}</p>
+            <p>{artist.name}</p>
+
+            </div>
+          </Link>
         </li>
       );
     })
