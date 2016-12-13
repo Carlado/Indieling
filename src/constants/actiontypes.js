@@ -6,3 +6,4 @@ export const GET_ARTISTS = 'GET_ARTISTS';
 export const GET_ALBUMS = 'GET_ALBUMS';
 
 export const GET_ARTIST_TRACKS = 'GET_ARTIST_TRACKS';
+export const GET_ARTIST_ALBUMS = 'GET_ARTIST_ALBUMS';

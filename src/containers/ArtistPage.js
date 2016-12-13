@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getArtistTracks} from '../actions/generateContentActions';
+import {getArtistTracks, getArtistAlbums} from '../actions/generateContentActions';
 import {connect} from 'react-redux';
 import ArtistTopTracks from '../components/ArtistTopTracks';
 
@@ -8,23 +8,30 @@ class ArtistPage extends Component {
 
   componentDidMount() {
     this.props.getArtistTracks(this.props.params.id);
+    this.props.getArtistAlbums(this.props.params.id);
+  }
+
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
   }
 
   render() {
-    if (!this.props.tracks) {
+    if (!this.props.tracks || !this.props.albums) {
       return (
         <div>...</div>
       );
     }
-    const result = this.props.tracks.results[0]
 
+    const album = this.props.albums.results[0];
+    const tracks = this.props.tracks.results;
+    
     return (
       <div>
         <div className="content-top-box">
-          <img className="content-image" src={result.image} />
-          <h2 className="content-heading">{result.name}</h2>
+          <img className="content-image" src={album.image} />
+          <h2 className="content-heading">{album.name}</h2>
         </div>
-        <ArtistTopTracks tracks={result.tracks}/>
+        <ArtistTopTracks tracks={tracks} />
       </div>
     );
 
@@ -33,8 +40,9 @@ class ArtistPage extends Component {
 
 function mapStateTopProps(state) {
   return {
-    tracks: state.artistTracks
+    tracks: state.artistTracks,
+    albums: state.artistAlbums
   }
 }
 
-export default connect(mapStateTopProps, {getArtistTracks})(ArtistPage);
+export default connect(mapStateTopProps, {getArtistAlbums, getArtistTracks})(ArtistPage);

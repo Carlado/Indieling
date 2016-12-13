@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  color: $clouds;
 }
 
 *,
@@ -194,4 +195,36 @@ body {
     font-size: 90%;
     margin: 0;
   }
+}
+
+//Artist page
+
+.top-tracks {
+  width: 50%;
+  margin: 50px auto;
+  h3 {
+    font-size: 110%;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  .top-tracks-item {
+    display: flex;
+    align-items: center;
+    padding: 1px 0;
+    border-bottom: 1px solid #536177;
+  }
+  img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+  }
+  .rating {    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+  }
+
 }
