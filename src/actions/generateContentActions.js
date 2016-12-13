@@ -15,7 +15,7 @@ export function getArtists(duration) {
 }
 
 export function getTracks(duration) {
-  const request = axios.get(`${ROOT_URL}tracks/?client_id=${KEY}&${FORMAT}&limit=10&order=popularity_month`);
+  const request = axios.get(`${ROOT_URL}tracks/?client_id=${KEY}&${FORMAT}&limit=10&order=popularity_${duration}`);
   return {
     type: types.GET_TRACKS,
     payload: request
@@ -23,7 +23,7 @@ export function getTracks(duration) {
 }
 
 export function getAlbums(duration) {
-  const request = axios.get(`${ROOT_URL}albums/?client_id=${KEY}&${FORMAT}&limit=10&order=popularity_month`);
+  const request = axios.get(`${ROOT_URL}albums/?client_id=${KEY}&${FORMAT}&limit=10&order=popularity_${duration}`);
   return {
     type: types.GET_ALBUMS,
     payload: request

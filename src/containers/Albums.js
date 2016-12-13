@@ -3,9 +3,11 @@ import {connect} from 'react-redux';
 
 import {getAlbums} from '../actions/generateContentActions';
 
+import Dropdown from './TimeDropdown';
+
 class Albums extends Component {
   componentWillMount() {
-    this.props.getAlbums();
+    this.props.getAlbums('week');
   }
 
   listAlbums() {
@@ -24,7 +26,7 @@ class Albums extends Component {
     }
     return (
       <div>
-        <h3>This months hottest albums on Indieling</h3>
+        <h3 className="view-heading">This hottest albums of <Dropdown content="albums"/> on Indieling.</h3>
         <ul>{this.listAlbums()}</ul>
       </div>
     );

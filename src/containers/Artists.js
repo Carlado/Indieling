@@ -9,7 +9,7 @@ class Artists extends Component {
   componentWillMount() {
     this.props.getArtists("week");
   }
-  
+
   listArtists() {
     return this.props.artists.results.map((artist) => {
       return (
@@ -30,7 +30,7 @@ class Artists extends Component {
     }
     return (
       <div className="artist-page">
-        <h3 className="view-heading">This hottest artists on Indieling <Dropdown content="artists" /></h3>
+        <h3 className="view-heading">This hottest artists of <Dropdown content="artists"/> on Indieling.</h3>
         <ul className="artist-list">{this.listArtists()}</ul>
       </div>
     );

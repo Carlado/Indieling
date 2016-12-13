@@ -4,18 +4,17 @@ import {getAlbums, getArtists, getTracks} from '../actions/generateContentAction
 
 
 class TimeDropdown extends Component  {
-
-
   sendValue() {
     const duration = document.querySelector('.time-dropdown').value;
-    const context = this.props.content;
-    if (context === "artists") {
+    //Pass down context as props from parent.
+    const content = this.props.content;
+    if (content === "artists") {
       this.props.getArtists(duration);
     }
-    if (context === "tracks") {
+    if (content === "tracks") {
       this.props.getTracks(duration);
     }
-    if (context === "albums") {
+    if (content === "albums") {
       this.props.getAlbums(duration);
     }
   }
