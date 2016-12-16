@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {getArtistTracks, getArtistAlbums} from '../actions/generateContentActions';
 import {connect} from 'react-redux';
 import ArtistTopTracks from '../components/ArtistTopTracks';
+import ArtistAlbums from '../components/ArtistAlbums';
 
 
 class ArtistPage extends Component {
@@ -24,14 +25,15 @@ class ArtistPage extends Component {
 
     const album = this.props.albums.results[0];
     const tracks = this.props.tracks.results;
-    
+
     return (
-      <div>
+      <div className="artist-page">
         <div className="content-top-box">
           <img className="content-image" src={album.image} />
           <h2 className="content-heading">{album.name}</h2>
         </div>
         <ArtistTopTracks tracks={tracks} />
+        <ArtistAlbums />
       </div>
     );
 

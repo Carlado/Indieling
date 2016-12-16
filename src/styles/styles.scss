@@ -25,6 +25,12 @@ body {
   box-sizing: inherit;
 }
 
+hr {
+  height: 1px;
+  border: 0;
+  background: #536177;
+}
+
 .view-heading {
   text-align: center;
   color: $clouds;
@@ -49,10 +55,8 @@ body {
 }
 
 .content-top-box {
-  margin-left: 30px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
   padding-top: 20px;
 }
 
@@ -199,6 +203,10 @@ body {
 
 //Artist page
 
+.artist-page {
+  width: 90%;
+  margin: 0 auto;
+}
 .top-tracks {
   width: 50%;
   margin: 50px auto;
