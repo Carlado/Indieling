@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import {getTracks} from '../actions/generateContentActions';
 
@@ -18,7 +19,7 @@ class Tracks extends Component {
           <FontAwesome className="nav-icon" name="play" size="2x"/>
           <div>
             <p className="trackname">{track.name}</p>
-            <p className="trackartist">{track.artist_name}</p>
+            <Link className="trackartist" to={'/artist/' + track.artist_id}>{track.artist_name}</Link>
           </div>
 
         </li>

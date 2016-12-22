@@ -195,9 +195,11 @@ hr {
     font-weight: 300;
     margin: 0;
   }
-  .trackartist {
+  .trackartist, .trackartist:visited {
     font-size: 90%;
     margin: 0;
+    text-decoration: none;
+    color: $clouds;
   }
 }
 
