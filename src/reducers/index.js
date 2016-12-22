@@ -6,8 +6,8 @@ import trackSearchReducer from './trackSearchReducer';
 import getArtistsReducer from './getArtistsReducer';
 import getTracksReducer from './getTracksReducer';
 import getAlbumsReducer from './getAlbumsReducer';
-import getArtistTracksReducer from './getArtistTracksReducer';
-import getArtistAlbumsReducer from './getArtistAlbumsReducer';
+import * as artistPage from './artistPageReducer';
+
 
 const rootReducer = combineReducers({
   routing: routerReducer,
@@ -16,8 +16,9 @@ const rootReducer = combineReducers({
   artists: getArtistsReducer,
   tracks: getTracksReducer,
   albums: getAlbumsReducer,
-  artistTracks: getArtistTracksReducer,
-  artistAlbums: getArtistAlbumsReducer
+  artistTracks: artistPage.getArtistTracksReducer,
+  artistInfo: artistPage.getArtistInfoReducer,
+  artistAlbums: artistPage.getArtistAlbumsReducer
 
 });
 

@@ -236,3 +236,15 @@ hr {
   }
 
 }
+
+.album-list {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 30px 0;
+  }
+}
+
+.album-heading-box {
+  @extend .content-top-box;
+}

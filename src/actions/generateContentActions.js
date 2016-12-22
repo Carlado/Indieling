@@ -38,8 +38,18 @@ export function getArtistTracks(id) {
   }
 }
 
+
+
+export function getArtistInfo(id) {
+  const request = axios.get(`${ROOT_URL}artists/locations/?client_id=${KEY}&${FORMAT}&id=${id}`);
+  return {
+    type: types.GET_ARTIST_INFO,
+    payload: request
+  }
+}
+
 export function getArtistAlbums(id) {
-  const request = axios.get(`${ROOT_URL}artists/albums/?client_id=${KEY}&${FORMAT}&limit=10&id=${id}&order=popularity_total`);
+  const request = axios.get(`${ROOT_URL}albums/tracks/?client_id=${KEY}&${FORMAT}&imagesize=100&artist_id=${id}`);
   return {
     type: types.GET_ARTIST_ALBUMS,
     payload: request
