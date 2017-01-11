@@ -37,6 +37,10 @@ hr {
   background: #536177;
 }
 
+ul {
+  margin: 0;
+}
+
 /* ===============
    REUSABLES
    =============== */
@@ -131,10 +135,10 @@ hr {
    SEARCH
    =============== */
 .search-heading {
+  padding: 40px 0;
   margin: 0;
   color: $clouds;
   text-align: center;
-  padding: 25px 0;
   font-weight: 300;
 }
 
@@ -201,6 +205,9 @@ hr {
   display: flex;
   align-items: center;
   position: relative;
+  &:last-child {
+    border: 0;
+  }
   img {
     height: 60px;
     width: auto;
@@ -230,6 +237,16 @@ hr {
     color: $clouds;
   }
 }
+
+/* ===============
+   ALBUMS PAGE (LIST)
+   =============== */
+
+.albums-list {
+  @extend .artist-list;
+}
+
+
 
 /* ===============
    ARTIST PAGE (INDIVIDUAL)
@@ -298,4 +315,22 @@ hr {
 
 .album-heading-box {
   @extend .content-top-box;
+}
+
+
+/* ===============
+   FOOTER
+   =============== */
+
+footer {
+  background: $theme;
+  padding: 12px 0;
+  p {
+    margin-bottom: 2px;
+    text-align: center;
+  }
+  span {
+    color: #e74c3c;
+    padding: 0 5px;
+  }
 }

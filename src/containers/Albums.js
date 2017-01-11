@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import { Link } from 'react-router';
 
 import {getAlbums} from '../actions/generateContentActions';
 
@@ -13,7 +14,14 @@ class Albums extends Component {
   listAlbums() {
     return this.props.albums.results.map((album) => {
       return (
-        <li key={album.id}>{album.name}</li>
+        <li key={album.id}>
+        <Link>
+          <div className="artistbox">
+            {album.image ? <img src={album.image} /> : <img src={require('../images/album.jpg')} />}
+          <p>{album.name}</p>
+          </div>
+        </Link>
+        </li>
       );
     })
   }
@@ -27,7 +35,7 @@ class Albums extends Component {
     return (
       <div>
         <h3 className="view-heading">This hottest albums of <Dropdown content="albums"/> on Indieling.</h3>
-        <ul>{this.listAlbums()}</ul>
+        <ul className="albums-list">{this.listAlbums()}</ul>
       </div>
     );
   }

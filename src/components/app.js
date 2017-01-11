@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import Topbar from './topbar'
+import Topbar from './topbar';
+import Footer from './footer';
 
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
         <div className="app-window">
           {this.props.children}
         </div>
+        <Footer />
       </div>
 
     );
