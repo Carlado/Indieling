@@ -1,10 +1,16 @@
-//Variables
+/* ===============
+   VARIABLES
+   =============== */
+
 $theme: #14181d;
 $details: #00ADB5;
 $silver: #222831;
 $clouds: #ecf0f1;
 
-//General
+/* ===============
+   GENERAL SETTINGS
+   =============== */
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -30,6 +36,10 @@ hr {
   border: 0;
   background: #536177;
 }
+
+/* ===============
+   REUSABLES
+   =============== */
 
 .view-heading {
   text-align: center;
@@ -76,7 +86,9 @@ hr {
 
 }
 
-//Topbar
+/* ===============
+   TOPBAR
+   =============== */
 .topbar {
   height: 50px;
   background: $theme;
@@ -115,20 +127,34 @@ hr {
 }
 
 
-//Search
+/* ===============
+   SEARCH
+   =============== */
+.search-heading {
+  margin: 0;
+  color: $clouds;
+  text-align: center;
+  padding: 25px 0;
+  font-weight: 300;
+}
+
 .searchbar {
   width: 50%;
   margin: 50px auto 0;
   input {
     width: 100%;
     border: none;
-    border-bottom: 2px solid $theme;
+    border-bottom: 1px solid $clouds;
     padding: 10px;
     font-size: 130%;
+    color: $clouds;
+    background: $silver;
   }
 }
 
-//Artists
+/* ===============
+   ARTISTS PAGE (LIST)
+   =============== */
 
 .artist-list {
 
@@ -159,7 +185,9 @@ hr {
   }
 }
 
-//Tracks
+/* ===============
+   TRACKS PAGE
+   =============== */
 .tracks-list {
   list-style: none;
   width: 80%;
@@ -203,7 +231,9 @@ hr {
   }
 }
 
-//Artist page
+/* ===============
+   ARTIST PAGE (INDIVIDUAL)
+   =============== */
 
 .artist-page {
   width: 90%;
@@ -242,8 +272,27 @@ hr {
 .album-list {
   list-style: none;
   padding: 0;
-  li {
+  .album-item {
     padding: 30px 0;
+  }
+  li {
+    list-style: none;
+  }
+
+  .album-tracks-list {
+    padding: 40px 0;
+  }
+
+  .album-track-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #536177;
+  }
+  .album-position {
+    margin-right: 15px;
+  }
+  .album-track-play {
+    color: $details;
+    margin-right: 15px;
   }
 }
 

@@ -25,7 +25,7 @@ const ArtistTopTracks = (props) => {
   return (
     <div className="top-tracks">
       <h3>Popular:</h3>
-      <ul class="top-tracks-list">{topTracksList}</ul>
+      <ul className="top-tracks-list">{topTracksList}</ul>
     </div>
   );
 }

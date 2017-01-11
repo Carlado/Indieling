@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {searchGetTracks, searchGetArtists} from '../actions/searchActions';
+import smartOutline from 'smart-outline';
 
 
 class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {term: ''};
+    //Smart outline to preserve focus when keyboard is used to preserve accessibility
+    smartOutline.init();
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }

@@ -5,7 +5,7 @@ const ArtistAlbums = (props) => {
 
   const albumList = props.albums.map(album => {
     return (
-      <li key={album.id}>
+      <li key={album.id} className="album-item">
         <div className="album-heading-box">
           <img src={album.image} />
           <h3 className="content-heading">{album.name}</h3>
