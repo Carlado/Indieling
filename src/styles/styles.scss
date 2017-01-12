@@ -65,7 +65,7 @@ ul {
 .content-image {
   border-radius: 2px;
   width: 100px;
-  height: auto;
+  height: 100px;
 }
 
 .content-top-box {
@@ -77,7 +77,10 @@ ul {
 .app-window {
   background: $silver;
   min-height: 100vh;
+  padding: 20px 0;
 }
+
+//Dropdown used for sorting content
 
 .time-dropdown {
   background: $silver;
@@ -88,6 +91,36 @@ ul {
   padding: 1px 2px;
   margin: 0 1px;
 
+}
+
+
+//Each album item including tracks, see reusable template on AlbumPage
+
+.album-item {
+  padding: 30px 0;
+}
+
+.album-tracks-list {
+  padding: 40px 0;
+}
+
+.album-track-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #536177;
+}
+.album-position {
+  margin-right: 15px;
+}
+.album-track-play {
+  color: $details;
+  margin-right: 15px;
+  &:hover {
+    color: #e74c3c;
+  }
+}
+
+.album-heading-box {
+  @extend .content-top-box;
 }
 
 /* ===============
@@ -129,6 +162,9 @@ ul {
     background: $details;
   }
 }
+
+
+
 
 
 /* ===============
@@ -246,6 +282,14 @@ ul {
   @extend .artist-list;
 }
 
+.album-albumname {
+  margin-bottom: 2px;
+}
+
+.album-artistname {
+  margin: 0;
+  font-size: 50%;
+}
 
 
 /* ===============
@@ -287,35 +331,26 @@ ul {
 }
 
 .album-list {
-  list-style: none;
   padding: 0;
-  .album-item {
-    padding: 30px 0;
-  }
-  li {
+  list-style: none;
+  ul {
     list-style: none;
   }
+}
 
-  .album-tracks-list {
-    padding: 40px 0;
-  }
 
-  .album-track-item {
-    padding: 8px 0;
-    border-bottom: 1px solid #536177;
-  }
-  .album-position {
-    margin-right: 15px;
-  }
-  .album-track-play {
-    color: $details;
-    margin-right: 15px;
+
+/* ===============
+   ALBUM PAGE (INDIVIDUAL)
+   =============== */
+.album-page {
+  @extend .artist-page;
+  ul {
+    list-style: none;
   }
 }
 
-.album-heading-box {
-  @extend .content-top-box;
-}
+//Uses track styling from reusables
 
 
 /* ===============

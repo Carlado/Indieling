@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {searchGetTracks, searchGetArtists} from '../actions/searchActions';
+import {searchGetTracks, searchGetArtists, searchGetAlbums} from '../actions/searchActions';
 import smartOutline from 'smart-outline';
 
 
@@ -23,6 +23,7 @@ class SearchBar extends Component {
     if (this.state.term.length > 2) {
       this.props.searchGetTracks(this.state.term);
       this.props.searchGetArtists(this.state.term);
+      this.props.searchGetAlbums(this.state.term);
     }
   }
 
@@ -38,4 +39,4 @@ class SearchBar extends Component {
   }
 }
 
-export default connect(null, {searchGetTracks, searchGetArtists})(SearchBar);
+export default connect(null, {searchGetTracks, searchGetArtists, searchGetAlbums})(SearchBar);

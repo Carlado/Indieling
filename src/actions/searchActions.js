@@ -22,3 +22,10 @@ export function searchGetArtists(term) {
     payload: request
   }
 }
+export function searchGetAlbums(term) {
+  const request = axios.get(`${ROOT_URL}albums/?client_id=${KEY}&${FORMAT}&limit=10&namesearch=${term}`);
+  return {
+    type: types.SEARCH_GET_ALBUMS,
+    payload: request
+  }
+}

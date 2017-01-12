@@ -7,6 +7,7 @@ import Artists from './containers/Artists';
 import Tracks from './containers/Tracks';
 import Albums from './containers/Albums';
 import ArtistPage from './containers/ArtistPage';
+import AlbumPage from './containers/AlbumPage';
 
 
 export default (
@@ -16,5 +17,6 @@ export default (
     <Route path="/albums" component={Albums} />
     <Route path="/search" component={Search} />
     <Route path="/artist/:id" component={ArtistPage} />
+    <Route path="/album/:id" component={AlbumPage} />
   </Route>
 );
