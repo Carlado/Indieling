@@ -10,8 +10,9 @@ class SearchResults extends Component {
     return (
       <div>
         <SearchArtists artists={this.props.artistresults}/>
-        <SearchTracks tracks={this.props.trackresults}/>
         <SearchAlbums albums={this.props.albumresults}/>
+        <SearchTracks tracks={this.props.trackresults}/>
+
       </div>
     );
   }
@@ -21,7 +22,8 @@ class SearchResults extends Component {
 function mapStatetoProps(state) {
   return {
     trackresults: state.trackSearch,
-    artistresults: state.artistSearch
+    artistresults: state.artistSearch,
+    albumresults: state.albumSearch
   };
 }
 
