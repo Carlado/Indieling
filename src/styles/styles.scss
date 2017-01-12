@@ -77,7 +77,7 @@ ul {
 .app-window {
   background: $silver;
   min-height: 100vh;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 //Dropdown used for sorting content
@@ -192,6 +192,18 @@ ul {
   }
 }
 
+.search-category {
+  padding: 40px 0;
+}
+
+.search-category-heading {
+  color: $clouds;
+  margin: 0;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+
+}
+
 /* ===============
    ARTISTS PAGE (LIST)
    =============== */
@@ -202,13 +214,13 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0;
   color: $clouds;
   li {
     display: inline-block;
     width: 200px;
     height: 250px;
-    margin: 20px;
+    margin: 20px 0;
     a, a:visited {
       text-decoration: none;
       color: $clouds;

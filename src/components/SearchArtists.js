@@ -21,8 +21,8 @@ const SearchArtists = (props) => {
   });
 
   return (
-    <div>
-      Artists:
+    <div className="search-category">
+      <h3 className="search-category-heading">Artists:</h3>
       <ul className="artist-list">{listArtists}</ul>
     </div>
   );
