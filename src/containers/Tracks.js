@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import {getTracks} from '../actions/generateContentActions';
+import {setTrack} from '../actions/playActions';
 
 import Dropdown from './TimeDropdown';
 
@@ -18,7 +19,7 @@ class Tracks extends Component {
           <img src={track.album_image} />
           <FontAwesome className="nav-icon" name="play" size="2x"/>
           <div>
-            <p className="trackname">{track.name}</p>
+            <p className="trackname" onClick={() => this.props.setTrack(track)}>{track.name}</p>
             <Link className="trackartist" to={'/artist/' + track.artist_id}>{track.artist_name}</Link>
           </div>
 
@@ -48,4 +49,4 @@ function mapStateTopProps(state) {
   };
 }
 
-export default connect(mapStateTopProps, {getTracks})(Tracks);
+export default connect(mapStateTopProps, {getTracks, setTrack})(Tracks);

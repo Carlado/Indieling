@@ -7,6 +7,7 @@ import getTracksReducer from './getTracksReducer';
 import getAlbumsReducer from './getAlbumsReducer';
 import * as artistPage from './artistPageReducer';
 import fetchAlbumReducer from './albumPageReducer';
+import setTrackReducer from './playerReducer';
 
 
 const rootReducer = combineReducers({
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
   artistTracks: artistPage.getArtistTracksReducer,
   artistInfo: artistPage.getArtistInfoReducer,
   artistAlbums: artistPage.getArtistAlbumsReducer,
-  album: fetchAlbumReducer
+  album: fetchAlbumReducer,
+  currentTrack: setTrackReducer
 
 });
 

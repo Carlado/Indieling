@@ -11,3 +11,5 @@ export const GET_ARTIST_ALBUMS = 'GET_ARTIST_ALBUMS';
 export const GET_ARTIST_INFO = 'GET_ARTIST_INFO';
 
 export const FETCH_ALBUM = 'FETCH_ALBUM';
+
+export const SET_TRACK = 'SET_TRACK';
