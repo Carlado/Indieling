@@ -35,7 +35,9 @@ class Artists extends Component {
     return (
       <div>
         <h3 className="view-heading">This hottest artists of <Dropdown content="artists"/> on Indieling.</h3>
-        <ul className="artist-list">{this.listArtists()}</ul>
+        <ul className="artist-list">
+          {this.listArtists()}
+        </ul>
       </div>
     );
   }

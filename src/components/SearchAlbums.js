@@ -23,6 +23,7 @@ const SearchAlbums = (props) => {
     <div className="search-category">
       <h3 className="search-category-heading">Albums:</h3>
       <ul className="albums-list">{albumList}</ul>
+      <hr className="album-hr" />
     </div>
   );
 };

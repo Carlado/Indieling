@@ -94,6 +94,7 @@ ul {
 }
 
 
+
 //Each album item including tracks, see reusable template on AlbumPage
 
 .album-item {
@@ -204,6 +205,10 @@ ul {
 
 }
 
+.album-hr {
+  margin-top: 30px;
+}
+
 /* ===============
    ARTISTS PAGE (LIST)
    =============== */
@@ -213,28 +218,29 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0;
   color: $clouds;
   li {
     display: inline-block;
-    width: 200px;
-    height: 250px;
-    margin: 20px 0;
+    width: 150px;
+    height: 200px;
+    margin: 20px 6px;
     a, a:visited {
       text-decoration: none;
       color: $clouds;
     }
     img {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 2px;
     }
     p {
       font-weight: 300;
-      font-size: 110%;
+      font-size: 100%;
     }
   }
+
 }
 
 /* ===============
@@ -359,6 +365,18 @@ ul {
   @extend .artist-page;
   ul {
     list-style: none;
+  }
+}
+
+.album-release {
+  margin-bottom: 0;
+  font-size: 90%;
+  a, a:visited {
+    text-decoration: none;
+    color: $details;
+  }
+  a:hover {
+    color: #e74c3c;
   }
 }
 
