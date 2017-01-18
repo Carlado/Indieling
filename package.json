@@ -34,6 +34,8 @@
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-fontawesome": "1.4.0",
+    "react-input-range": "0.9.3",
+    "react-rangeslider": "1.0.5",
     "react-redux": "4.4.5",
     "react-router": "2.8.1",
     "react-router-redux": "4.0.6",
