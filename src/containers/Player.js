@@ -11,6 +11,7 @@ class Player extends Component {
     this.onPlay = this.onPlay.bind(this);
     this.onPause = this.onPause.bind(this);
     this.setVolume = this.setVolume.bind(this);
+    this.handlePlaying = this.handlePlaying.bind(this);
     this.state = {playStatus: Sound.status.PLAYING,
                   position: 0,
                   volume: 50};
@@ -23,8 +24,13 @@ class Player extends Component {
   onPause() {
     this.setState({playStatus: Sound.status.PAUSED});
   }
+
   setVolume(component, value) {
     this.setState({volume: value});
+  }
+
+  handlePlaying(audio) {
+    this.setState({position: audio.position})
   }
 
   render() {
@@ -59,9 +65,8 @@ class Player extends Component {
         <Sound
         url={track.audio}
         playStatus={this.state.playStatus}
-        playFromPosition={this.state.position}
         volume={this.state.volume}
-        onPlaying={({position}) => this.setState({position})}
+        onPlaying={this.handlePlaying}
         onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
         />
 
