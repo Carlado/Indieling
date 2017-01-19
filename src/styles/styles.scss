@@ -23,6 +23,7 @@ body {
   padding: 0;
   height: 100%;
   color: $clouds;
+  overflow-x: hidden;
 }
 
 *,
@@ -381,6 +382,25 @@ ul {
 }
 
 //Uses track styling from reusables
+
+
+/* ===============
+   PLAYER
+   =============== */
+.player {
+  width: 100%;
+}
+
+.sound-slider {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.position-slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
 
 
 /* ===============

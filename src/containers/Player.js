@@ -11,11 +11,15 @@ class Player extends Component {
     this.onPlay = this.onPlay.bind(this);
     this.onPause = this.onPause.bind(this);
     this.setVolume = this.setVolume.bind(this);
+    this.setPosition = this.setPosition.bind(this);
     this.handlePlaying = this.handlePlaying.bind(this);
     this.state = {playStatus: Sound.status.PLAYING,
                   position: 0,
+                  playFromPosition: 0,
                   volume: 50};
   }
+
+
 
   onPlay() {
     this.setState({playStatus: Sound.status.PLAYING});
@@ -27,6 +31,13 @@ class Player extends Component {
 
   setVolume(component, value) {
     this.setState({volume: value});
+  }
+
+  setPosition(component, value) {
+    this.setState({
+      playFromPosition: value * 1000,
+      playStatus: Sound.status.PLAYING
+    });
   }
 
   handlePlaying(audio) {
@@ -46,18 +57,19 @@ class Player extends Component {
           <button className="player-play" onClick={this.onPlay}>Play</button> :
           <button className="player-play" onClick={this.onPause}>Pause</button>
         }
-        <div>
+        <div className="sound-slider">
           <InputRange
           maxValue={100}
           minValue={0}
           value={this.state.volume}
           onChange={this.setVolume} />
         </div>
-        <div>
+        <div className="position-slider">
           <InputRange
-          maxValue={track.duration}
+          maxValue={track.duration + 1}
           minValue={0}
           value={this.state.position / 1000}
+          onChange={this.setPosition}
            />
         </div>
         <p style={{color: "black"}}>{track.name}</p>
@@ -65,6 +77,7 @@ class Player extends Component {
         <Sound
         url={track.audio}
         playStatus={this.state.playStatus}
+        playFromPosition={this.state.playFromPosition}
         volume={this.state.volume}
         onPlaying={this.handlePlaying}
         onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
