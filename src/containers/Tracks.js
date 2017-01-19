@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import {getTracks} from '../actions/generateContentActions';
-import {setTrack} from '../actions/playActions';
+import {setTrack, addTrack} from '../actions/playActions';
 
 import Dropdown from './TimeDropdown';
 
@@ -22,7 +22,7 @@ class Tracks extends Component {
             <p className="trackname" onClick={() => this.props.setTrack(track)}>{track.name}</p>
             <Link className="trackartist" to={'/artist/' + track.artist_id}>{track.artist_name}</Link>
           </div>
-
+          <button onClick={() => this.props.addTrack(track)}>Add</button>
         </li>
       );
     });
@@ -49,4 +49,4 @@ function mapStateTopProps(state) {
   };
 }
 
-export default connect(mapStateTopProps, {getTracks, setTrack})(Tracks);
+export default connect(mapStateTopProps, {getTracks, setTrack, addTrack})(Tracks);

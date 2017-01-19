@@ -7,3 +7,11 @@ export function setTrack(track) {
   }
 
 }
+
+export function addTrack(track) {
+  return {
+    type: types.ADD_TRACK,
+    payload: track
+  }
+
+}
