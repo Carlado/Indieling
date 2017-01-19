@@ -48,9 +48,16 @@ class Player extends Component {
   }
 
   nextSong() {
-    this.props.setTrack(this.props.list.list[this.state.listPosition]);
-    this.setState({listPosition: this.state.listPosition + 1})
+    const {list} = this.props.list;
+
+    if (list.length > this.state.listPosition) {
+      this.props.setTrack(list[this.state.listPosition]);
+      this.setState({listPosition: this.state.listPosition + 1});
+    } 
+
   }
+
+
 
   render() {
     if (!this.props.track) {
@@ -65,6 +72,7 @@ class Player extends Component {
           <button className="player-play" onClick={this.onPlay}>Play</button> :
           <button className="player-play" onClick={this.onPause}>Pause</button>
         }
+        <button onClick={this.nextSong}>Next</button>
         <div className="sound-slider">
           <InputRange
           maxValue={100}
