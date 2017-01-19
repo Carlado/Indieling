@@ -10,7 +10,7 @@ const Topbar = () => {
         <li><Link to="/tracks" activeClassName="active"><FontAwesome className="nav-icon" name="music" size="lg"/>Tracks</Link></li>
         <li><Link to="/albums" activeClassName="active"><FontAwesome className="nav-icon" name="circle-o" size="lg"/>Albums</Link></li>
         <li><Link to="/search" activeClassName="active"><FontAwesome className="nav-icon" name="search" size="lg"/>Search</Link></li>
-        <li><Link to="/playlist" activeClassName="active"><FontAwesome className="nav-icon" name="search" size="lg"/>Playlist</Link></li>
+        <li><Link to="/playlist" activeClassName="active"><FontAwesome className="nav-icon" name="list" size="lg"/>Playlist</Link></li>
 
       </ul>
 

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Sound from 'react-sound';
 import {connect} from 'react-redux';
+import {setTrack} from '../actions/playActions';
 import InputRange from 'react-input-range';
 
 
@@ -13,12 +14,14 @@ class Player extends Component {
     this.setVolume = this.setVolume.bind(this);
     this.setPosition = this.setPosition.bind(this);
     this.handlePlaying = this.handlePlaying.bind(this);
+    this.nextSong = this.nextSong.bind(this);
     this.state = {playStatus: Sound.status.PLAYING,
                   position: 0,
                   playFromPosition: 0,
-                  volume: 50};
+                  volume: 50,
+                  listPosition: 0
+                };
   }
-
 
 
   onPlay() {
@@ -42,6 +45,11 @@ class Player extends Component {
 
   handlePlaying(audio) {
     this.setState({position: audio.position})
+  }
+
+  nextSong() {
+    this.props.setTrack(this.props.list.list[this.state.listPosition]);
+    this.setState({listPosition: this.state.listPosition + 1})
   }
 
   render() {
@@ -80,7 +88,7 @@ class Player extends Component {
         playFromPosition={this.state.playFromPosition}
         volume={this.state.volume}
         onPlaying={this.handlePlaying}
-        onFinishedPlaying={() => this.setState({playStatus: Sound.status.STOPPED})}
+        onFinishedPlaying={this.nextSong}
         />
 
 
@@ -91,8 +99,9 @@ class Player extends Component {
 
 function mapStateTopProps(state) {
   return {
-    track: state.currentTrack
+    track: state.currentTrack,
+    list: state.list
   }
 }
 
-export default connect(mapStateTopProps)(Player);
+export default connect(mapStateTopProps, {setTrack})(Player);
