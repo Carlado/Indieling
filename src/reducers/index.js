@@ -23,7 +23,7 @@ const rootReducer = combineReducers({
   artistAlbums: artistPage.getArtistAlbumsReducer,
   album: fetchAlbumReducer,
   currentTrack: player.setTrackReducer,
-  list: player.addTrackReducer
+  list: player.listReducer
 
 });
 

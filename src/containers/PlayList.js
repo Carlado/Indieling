@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {clearList} from '../actions/playActions';
 
 class PlayList extends Component {
 
   listItems() {
     return this.props.list.list.map(track => {
       return (
-        <li>{track.name}</li>
+        <li key={track.id}>{track.name}</li>
       );
     });
   }
@@ -18,6 +19,7 @@ class PlayList extends Component {
     console.log(this.props.list);
     return (
       <div>
+        <button onClick={() => this.props.clearList()}>Clear queue</button>
         <ul>{this.listItems()}</ul>
       </div>
     );
@@ -31,4 +33,4 @@ function mapStateTopProps(state) {
   }
 }
 
-export default connect(mapStateTopProps)(PlayList);
+export default connect(mapStateTopProps, {clearList})(PlayList);

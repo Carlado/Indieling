@@ -53,10 +53,16 @@ class Player extends Component {
     if (list.length > this.state.listPosition) {
       this.props.setTrack(list[this.state.listPosition]);
       this.setState({listPosition: this.state.listPosition + 1});
-    } 
+    }
 
   }
 
+  secToMinSec(time) {
+    const min = Math.floor(time / 60);
+    let sec = Math.floor(time - min * 60);
+    sec = (sec < 10) ? `0${sec}` : sec;
+    return `${min}:${sec}`;
+  }
 
 
   render() {
@@ -81,12 +87,14 @@ class Player extends Component {
           onChange={this.setVolume} />
         </div>
         <div className="position-slider">
+          <span className="song-length">{this.secToMinSec(this.state.position / 1000)}</span>
           <InputRange
           maxValue={track.duration + 1}
           minValue={0}
           value={this.state.position / 1000}
           onChange={this.setPosition}
            />
+          <span className="song-length">{this.secToMinSec(track.duration)}</span>
         </div>
         <p style={{color: "black"}}>{track.name}</p>
 

@@ -1,4 +1,4 @@
-import {SET_TRACK, ADD_TRACK} from '../constants/actiontypes';
+import {SET_TRACK, ADD_TRACK, CLEAR_LIST} from '../constants/actiontypes';
 
 export function setTrackReducer(state= null, action) {
   switch(action.type) {
@@ -10,10 +10,13 @@ export function setTrackReducer(state= null, action) {
 
 const INITIAL_STATE = {list: []};
 
-export function addTrackReducer(state = INITIAL_STATE, action) {
+export function listReducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case ADD_TRACK :
       return { list: [...state.list, action.payload] };
+    case CLEAR_LIST :
+        return INITIAL_STATE;
+
   }
   return state;
 }

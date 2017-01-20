@@ -13,5 +13,10 @@ export function addTrack(track) {
     type: types.ADD_TRACK,
     payload: track
   }
+}
 
+export function clearList() {
+  return {
+    type: types.CLEAR_LIST
+  }
 }

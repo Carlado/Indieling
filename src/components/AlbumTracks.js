@@ -1,23 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
 import FontAwesome from 'react-fontawesome';
+import {setTrack} from '../actions/playActions';
+import {connect} from 'react-redux';
 
-const AlbumTracks = (props) => {
+class AlbumTracks extends Component {
 
-  const tracksList = props.tracks.map(track => {
-    console.log(track);
+  constructor(props) {
+    super(props);
+  }
+
+  listTrack() {
+    return this.props.tracks.map(track => {
+      return (
+        <li key={track.id} className="album-track-item" onClick={() => this.props.setTrack(track)}>
+          <FontAwesome className="nav-icon album-track-play" name="play" size="1x"/>
+          <span className="album-position">{track.position}</span>
+          <span>{track.name}</span>
+        </li>
+      );
+    });
+  }
+
+  render() {
     return (
-      <li key={track.id} className="album-track-item">
-        <FontAwesome className="nav-icon album-track-play" name="play" size="1x"/>
-        <span className="album-position">{track.position}</span>
-        <span>{track.name}</span>
-      </li>
+      <ul className="album-tracks-list">{this.listTrack()}</ul>
     );
-  })
+  }
 
-  return (
-    <ul className="album-tracks-list">{tracksList}</ul>
-  );
 
 }
 
-export default AlbumTracks;
+export default connect(null, {setTrack})(AlbumTracks);

@@ -15,3 +15,4 @@ export const FETCH_ALBUM = 'FETCH_ALBUM';
 
 export const SET_TRACK = 'SET_TRACK';
 export const ADD_TRACK = 'ADD_TRACK';
+export const CLEAR_LIST = 'CLEAR_LIST';

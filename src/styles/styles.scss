@@ -401,6 +401,10 @@ ul {
   margin: 0 auto;
 }
 
+.song-length {
+  color: black;
+}
+
 
 
 /* ===============
@@ -458,31 +462,8 @@ footer {
      transition: left 0.3s ease-out; }
 
    .InputRange-label {
-     color: #aaaaaa;
-     font-family: "Helvetica Neue", san-serif;
-     font-size: 0.8rem;
-     white-space: nowrap; }
+     display: none}
 
-   .InputRange-label--min,
-   .InputRange-label--max {
-     bottom: -1.4rem;
-     position: absolute; }
-
-   .InputRange-label--min {
-     left: 0; }
-
-   .InputRange-label--max {
-     right: 0; }
-
-   .InputRange-label--value {
-     position: absolute;
-     top: -1.8rem; }
-
-   .InputRange-labelContainer {
-     left: -50%;
-     position: relative; }
-     .InputRange-label--max .InputRange-labelContainer {
-       left: 50%; }
 
    .InputRange-track {
      background: #eeeeee;
