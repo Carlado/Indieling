@@ -20,3 +20,15 @@ export function clearList() {
     type: types.CLEAR_LIST
   }
 }
+
+export function incrementPosition() {
+  return  {
+    type: types.INCREMENT_POSITION
+  }
+}
+
+export function replayList() {
+  return  {
+    type: types.REPLAY_LIST
+  }
+}

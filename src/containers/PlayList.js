@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {clearList} from '../actions/playActions';
+import {clearList, replayList} from '../actions/playActions';
 
 class PlayList extends Component {
 
@@ -20,6 +20,7 @@ class PlayList extends Component {
     return (
       <div>
         <button onClick={() => this.props.clearList()}>Clear queue</button>
+        <button onClick={() => this.props.replayList()}>Play again</button>
         <ul>{this.listItems()}</ul>
       </div>
     );
@@ -33,4 +34,4 @@ function mapStateTopProps(state) {
   }
 }
 
-export default connect(mapStateTopProps, {clearList})(PlayList);
+export default connect(mapStateTopProps, {clearList, replayList})(PlayList);

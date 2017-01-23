@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Sound from 'react-sound';
 import {connect} from 'react-redux';
-import {setTrack} from '../actions/playActions';
+import {setTrack, incrementPosition} from '../actions/playActions';
 import InputRange from 'react-input-range';
 
 
@@ -19,7 +19,6 @@ class Player extends Component {
                   position: 0,
                   playFromPosition: 0,
                   volume: 50,
-                  listPosition: 0
                 };
   }
 
@@ -50,9 +49,9 @@ class Player extends Component {
   nextSong() {
     const {list} = this.props.list;
 
-    if (list.length > this.state.listPosition) {
-      this.props.setTrack(list[this.state.listPosition]);
-      this.setState({listPosition: this.state.listPosition + 1});
+    if (list.length > this.props.list.listPosition) {
+      this.props.setTrack(list[this.props.list.listPosition]);
+      this.props.incrementPosition();
     }
 
   }
@@ -89,7 +88,7 @@ class Player extends Component {
         <div className="position-slider">
           <span className="song-length">{this.secToMinSec(this.state.position / 1000)}</span>
           <InputRange
-          maxValue={track.duration + 1}
+          maxValue={Math.ceil(Number(track.duration))}
           minValue={0}
           value={this.state.position / 1000}
           onChange={this.setPosition}
@@ -120,4 +119,4 @@ function mapStateTopProps(state) {
   }
 }
 
-export default connect(mapStateTopProps, {setTrack})(Player);
+export default connect(mapStateTopProps, {setTrack, incrementPosition})(Player);
