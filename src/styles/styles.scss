@@ -23,7 +23,6 @@ body {
   padding: 0;
   height: 100%;
   color: $clouds;
-  overflow-x: hidden;
 }
 
 *,
@@ -79,6 +78,7 @@ ul {
   background: $silver;
   min-height: 100vh;
   padding: 20px;
+  overflow: hidden;
 }
 
 //Dropdown used for sorting content
@@ -389,6 +389,11 @@ ul {
    =============== */
 .player {
   width: 100%;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:100px;
+  background: $theme;
 }
 
 .sound-slider {
