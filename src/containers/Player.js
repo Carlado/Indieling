@@ -74,57 +74,57 @@ class Player extends Component {
 
     return (
       <div className="player">
-      <div className="position-slider">
-        <InputRange
-        maxValue={Math.ceil(Number(track.duration))}
-        minValue={0}
-        value={this.state.position / 1000}
-        onChange={this.setPosition}
-         />
-         <span className="song-length current-time">{this.secToMinSec(this.state.position / 1000)}</span>
-         <span className="song-length duration-time">{this.secToMinSec(track.duration)}</span>
-      </div>
-      <div className="player-bottom-row">
-        <div className="player-song-info">
-          <span>{track.name}</span>
+        <div className="position-slider">
+          <InputRange
+          maxValue={Math.ceil(Number(track.duration))}
+          minValue={0}
+          value={this.state.position / 1000}
+          onChange={this.setPosition}
+           />
+           <span className="song-length current-time">{this.secToMinSec(this.state.position / 1000)}</span>
+           <span className="song-length duration-time">{this.secToMinSec(track.duration)}</span>
         </div>
-        <div className="player-controls">
-          {this.state.playStatus !== Sound.status.PLAYING ?
-            <FontAwesome className="player-icon"
-              onClick={this.onPlay}
-              name="play"
-              size="2x"
-              title="Play"
-            /> :
-            <FontAwesome className="player-icon"
-              onClick={this.onPause}
-              name="pause"
-              size="2x"
-              title="Pause"
-            />
-          }
-          <FontAwesome className="player-icon"
-            onClick={this.nextSong}
-            name="step-forward"
-            size="2x"
-            title="Next"
-          />
-        </div>
-        <div className="volume-control">
-          <FontAwesome className="volume-icon"
-            name="volume-down"
-          />
-          <div className="sound-slider">
-            <InputRange
-            maxValue={100}
-            minValue={0}
-            value={this.state.volume}
-            onChange={this.setVolume} />
+        <div className="player-bottom-row">
+          <div className="player-song-info">
+            <span>{track.name}</span>
           </div>
+          <div className="player-controls">
+            {this.state.playStatus !== Sound.status.PLAYING ?
+              <FontAwesome className="player-icon"
+                onClick={this.onPlay}
+                name="play"
+                size="2x"
+                title="Play"
+              /> :
+              <FontAwesome className="player-icon"
+                onClick={this.onPause}
+                name="pause"
+                size="2x"
+                title="Pause"
+              />
+            }
+            <FontAwesome className="player-icon"
+              onClick={this.nextSong}
+              name="step-forward"
+              size="2x"
+              title="Next"
+            />
+          </div>
+          <div className="volume-control">
+            <FontAwesome className="volume-icon"
+              name="volume-down"
+            />
+            <div className="sound-slider">
+              <InputRange
+              maxValue={100}
+              minValue={0}
+              value={this.state.volume}
+              onChange={this.setVolume} />
+            </div>
+          </div>
+
+
         </div>
-
-
-      </div>
 
 
         <Sound
