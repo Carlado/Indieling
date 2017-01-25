@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import FontAwesome from 'react-fontawesome';
-import {setTrack} from '../actions/playActions';
+import {setTrack, addTrack} from '../actions/playActions';
 import {connect} from 'react-redux';
 
 class AlbumTracks extends Component {
@@ -12,10 +12,20 @@ class AlbumTracks extends Component {
   listTrack() {
     return this.props.tracks.map(track => {
       return (
-        <li key={track.id} className="album-track-item" onClick={() => this.props.setTrack(track)}>
-          <FontAwesome className="nav-icon album-track-play" name="play" size="1x"/>
+        <li key={track.id} className="album-track-item">
+          <FontAwesome
+            className="nav-icon album-track-play"
+            name="play"
+            size="1x"
+            onClick={() => this.props.setTrack(track)}
+            />
           <span className="album-position">{track.position}</span>
           <span>{track.name}</span>
+          <FontAwesome className="addbutton-album"
+            onClick={() => this.props.addTrack(track)}
+            name="plus"
+            size="1x"
+            title="Add to queue" />
         </li>
       );
     });
@@ -30,4 +40,4 @@ class AlbumTracks extends Component {
 
 }
 
-export default connect(null, {setTrack})(AlbumTracks);
+export default connect(null, {setTrack, addTrack})(AlbumTracks);

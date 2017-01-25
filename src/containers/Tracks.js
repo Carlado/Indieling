@@ -17,12 +17,17 @@ class Tracks extends Component {
       return (
         <li key={track.id} className="track">
           <img src={track.album_image} />
-          <FontAwesome className="nav-icon" name="play" size="2x"/>
+          <FontAwesome className="playbutton-tracks" name="play" size="2x"/>
           <div>
             <p className="trackname" onClick={() => this.props.setTrack(track)}>{track.name}</p>
             <Link className="trackartist" to={'/artist/' + track.artist_id}>{track.artist_name}</Link>
           </div>
-          <button onClick={() => this.props.addTrack(track)}>Add</button>
+          <FontAwesome className="addbutton-tracks"
+            onClick={() => this.props.addTrack(track)}
+            name="plus"
+            size="2x"
+            title="Add to queue"
+          />
         </li>
       );
     });

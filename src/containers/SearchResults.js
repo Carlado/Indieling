@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {setTrack, addTrack} from '../actions/playActions';
 import SearchTracks from '../components/SearchTracks';
 import SearchArtists from '../components/SearchArtists';
 import SearchAlbums from '../components/SearchAlbums';
@@ -11,8 +12,10 @@ class SearchResults extends Component {
       <div>
         <SearchArtists artists={this.props.artistresults}/>
         <SearchAlbums albums={this.props.albumresults}/>
-        <SearchTracks tracks={this.props.trackresults}/>
-
+        <SearchTracks
+          tracks={this.props.trackresults}
+          setTrack={this.props.setTrack}
+          addTrack={this.props.addTrack}/>
       </div>
     );
   }
@@ -27,4 +30,4 @@ function mapStatetoProps(state) {
   };
 }
 
-export default connect(mapStatetoProps)(SearchResults);
+export default connect(mapStatetoProps,{addTrack, setTrack})(SearchResults);

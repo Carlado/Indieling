@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 
 const ArtistTopTracks = (props) => {
   //props getting passed down from ArtistPage
@@ -12,6 +13,7 @@ const ArtistTopTracks = (props) => {
         <li key={track.id}>
           <div className="top-tracks-item">
             <img src={track.album_image} />
+            <FontAwesome className="playbutton-top" name="play" size="1x"/>
             <span className="rating">{i+1}</span>
             <span>{track.name}</span>
           </div>

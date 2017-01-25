@@ -12,11 +12,21 @@ const SearchTracks = (props) => {
     return (
       <li key={track.id} className="track">
         <img src={track.album_image} />
-        <FontAwesome className="nav-icon" name="play" size="2x"/>
+        <FontAwesome
+          onClick={() => props.setTrack(track)}
+          className="playbutton-tracks"
+          name="play"
+          size="2x"/>
         <div>
           <p className="trackname">{track.name}</p>
           <Link className="trackartist" to={'/artist/' + track.artist_id}>{track.artist_name}</Link>
         </div>
+        <FontAwesome className="addbutton-tracks"
+          onClick={() => props.addTrack(track)}
+          name="plus"
+          size="2x"
+          title="Add to queue"
+        />
 
       </li>
     );
