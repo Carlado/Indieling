@@ -18,7 +18,7 @@ const SearchTracks = (props) => {
           name="play"
           size="2x"/>
         <div>
-          <p className="trackname">{track.name}</p>
+          <p className="trackname" onClick={() => props.setTrack(track)}>{track.name}</p>
           <Link className="trackartist" to={'/artist/' + track.artist_id}>{track.artist_name}</Link>
         </div>
         <FontAwesome className="addbutton-tracks"

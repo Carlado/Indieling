@@ -43,6 +43,10 @@ ul {
   margin: 0;
 }
 
+.fa-lg {
+  line-height: 1em;
+}
+
 /* ===============
    REUSABLES
    =============== */
@@ -64,6 +68,22 @@ ul {
   margin-left: 20px;
 }
 
+.default-button {
+  padding: 7px 20px;
+  background: transparent;
+  border: 1px solid $details;
+  color: $clouds;
+  border-radius: 500px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 75%;
+  font-weight: 300;
+  letter-spacing: 1px;
+  &:hover {
+    background: $details;
+  }
+}
+
 .content-image {
   border-radius: 2px;
   width: 100px;
@@ -79,8 +99,14 @@ ul {
 .app-window {
   background: $silver;
   min-height: 100vh;
-  padding: 20px;
+  padding: 50px 20px;
   overflow: hidden;
+}
+
+.click-play {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
 }
 
 //Dropdown used for sorting content
@@ -116,10 +142,16 @@ ul {
 .album-position {
   margin-right: 15px;
 }
+
+.album-trackname {
+  cursor: pointer;
+}
+
 .album-track-play {
   color: $details;
   margin-right: 15px;
   transition: color 0.2s;
+  cursor: pointer;
   &:hover {
     color: $hover-red;
   }
@@ -127,8 +159,12 @@ ul {
 
 .addbutton-album {
   position: absolute;
-  right: 0;
+  right: 2px;
   color: $silver-light;
+  cursor: pointer;
+  &:hover {
+    color: $hover-red;
+  }
 
 }
 
@@ -144,6 +180,11 @@ ul {
   background: $theme;
   color: $clouds;
   line-height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .nav-items {
@@ -230,7 +271,7 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 0;
   color: $clouds;
   li {
@@ -284,6 +325,7 @@ ul {
     left: 19px;
     color: $details;
     transition: color 0.2s;
+    cursor: pointer;
     &:hover {
       color: $hover-red;
     }
@@ -296,6 +338,7 @@ ul {
     font-size: 120%;
     font-weight: 300;
     margin: 0;
+    cursor: pointer;
   }
   .trackartist, .trackartist:visited {
     font-size: 90%;
@@ -310,6 +353,7 @@ ul {
   right: 5px;
   color: $silver-light;
   transition: color 0.2s;
+  cursor: pointer;
   &:hover {
     color: $hover-red;
   }
@@ -360,6 +404,7 @@ ul {
     padding: 1px 0;
     border-bottom: 1px solid #536177;
   }
+
   img {
     width: 40px;
     height: auto;
@@ -449,7 +494,7 @@ ul {
 
 .player-bottom-row {
   display: flex;
-  justify-content: space-around;
+
   align-items: center;
   margin-top: 25px;
 }
@@ -474,6 +519,18 @@ ul {
 .player-controls {
   display: flex;
   justify-content: center;
+  width: 33.333333%;
+}
+
+.volume-control {
+  width: 33.333333%;
+  display: flex;
+  justify-content: center;
+}
+
+.player-song-info {
+  width: 33.333333%;
+  text-align: center;
 }
 
 .player-icon {
@@ -486,8 +543,18 @@ ul {
 }
 
 
+/* ===============
+   PLAYLIST (QUEUE)
+   =============== */
+.playlist-controls {
+  padding: 20px 0;
+  text-align: center;
+  button {
+    text-align: center;
+    margin: 0 10px;
 
-
+  }
+}
 
 /* ===============
    FOOTER
@@ -549,3 +616,9 @@ footer {
      width: 100%;
      height: 1rem;
     }
+
+/* ===============
+  IMPORT QUERIES
+  =============== */
+
+@import 'queries';

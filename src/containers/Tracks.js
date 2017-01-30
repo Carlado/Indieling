@@ -17,7 +17,11 @@ class Tracks extends Component {
       return (
         <li key={track.id} className="track">
           <img src={track.album_image} />
-          <FontAwesome className="playbutton-tracks" name="play" size="2x"/>
+          <FontAwesome
+            className="playbutton-tracks"
+            name="play"
+            size="2x"
+            onClick={() => this.props.setTrack(track)}/>
           <div>
             <p className="trackname" onClick={() => this.props.setTrack(track)}>{track.name}</p>
             <Link className="trackartist" to={'/artist/' + track.artist_id}>{track.artist_name}</Link>

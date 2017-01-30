@@ -13,19 +13,19 @@ class AlbumTracks extends Component {
     return this.props.tracks.map(track => {
       return (
         <li key={track.id} className="album-track-item">
-          <FontAwesome
-            className="nav-icon album-track-play"
-            name="play"
-            size="1x"
-            onClick={() => this.props.setTrack(track)}
-            />
-          <span className="album-position">{track.position}</span>
-          <span>{track.name}</span>
+          <div className="click-play" onClick={() => this.props.setTrack(track)}>
+            <FontAwesome
+              className="nav-icon album-track-play"
+              name="play"
+              size="lg"
+              />
+            <span className="album-position">{track.position}</span>
+            <span className="album-trackname">{track.name}</span>
+          </div>
           <FontAwesome className="addbutton-album"
             onClick={() => this.props.addTrack(track)}
             name="plus"
-            size="1x"
-            title="Add to queue" />
+            title="Add to queue" size="lg" />
         </li>
       );
     });

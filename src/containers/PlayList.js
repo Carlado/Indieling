@@ -1,13 +1,21 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {clearList, replayList} from '../actions/playActions';
+import {clearList, replayList, setTrack} from '../actions/playActions';
+import FontAwesome from 'react-fontawesome';
+import { Link } from 'react-router';
 
 class PlayList extends Component {
 
   listItems() {
     return this.props.list.list.map(track => {
       return (
-        <li key={track.id}>{track.name}</li>
+        <li key={track.id} className="track">
+          <img src={track.album_image} />
+          <div>
+            <p className="trackname" onClick={() => this.props.setTrack(track)}>{track.name}</p>
+            <Link className="trackartist" to={'/artist/' + track.artist_id}>{track.artist_name}</Link>
+          </div>
+        </li>
       );
     });
   }
@@ -19,9 +27,11 @@ class PlayList extends Component {
     console.log(this.props.list);
     return (
       <div>
-        <button onClick={() => this.props.clearList()}>Clear queue</button>
-        <button onClick={() => this.props.replayList()}>Play again</button>
-        <ul>{this.listItems()}</ul>
+        <div className="playlist-controls">
+          <button className="default-button" onClick={() => this.props.clearList()}>Clear queue</button>
+          <button className="default-button" onClick={() => this.props.replayList()}>Play again</button>
+        </div>
+        <ul className="list-tracks">{this.listItems()}</ul>
       </div>
     );
   }
@@ -34,4 +44,4 @@ function mapStateTopProps(state) {
   }
 }
 
-export default connect(mapStateTopProps, {clearList, replayList})(PlayList);
+export default connect(mapStateTopProps, {clearList, replayList, setTrack})(PlayList);
