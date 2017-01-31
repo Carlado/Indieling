@@ -51,6 +51,18 @@ ul {
    REUSABLES
    =============== */
 
+.spinner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 64px;
+  width: 64px;
+  z-index: 999;
+}
+
 .view-heading {
   text-align: center;
   color: $clouds;

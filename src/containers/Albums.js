@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Loading from 'react-loading';
 import {connect} from 'react-redux';
 import { Link } from 'react-router';
 
@@ -30,7 +31,9 @@ class Albums extends Component {
   render() {
     if (!this.props.albums) {
       return (
-        <div>Albums...</div>
+        <div className="spinner" >
+          <Loading type='spin' color='#e3e3e3' />
+        </div>
       );
     }
     return (

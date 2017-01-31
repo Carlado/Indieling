@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Loading from 'react-loading';
 import {connect} from 'react-redux';
 import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
@@ -40,7 +41,9 @@ class Tracks extends Component {
   render() {
     if (!this.props.tracks) {
       return (
-        <div>Tracks...</div>
+        <div className="spinner" >
+          <Loading type='spin' color='#e3e3e3' />
+        </div>
       );
     }
     return (

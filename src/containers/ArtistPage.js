@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Loading from 'react-loading';
 import {getArtistTracks, getArtistInfo, getArtistAlbums} from '../actions/generateContentActions';
 import {setTrack, addTrack, addAlbum} from '../actions/playActions';
 import {connect} from 'react-redux';
@@ -22,7 +23,9 @@ class ArtistPage extends Component {
 
     if (!this.props.tracks || !this.props.info || !this.props.albums) {
       return (
-        <div>...</div>
+        <div className="spinner" >
+          <Loading type='spin' color='#e3e3e3' />
+        </div>
       );
     }
 

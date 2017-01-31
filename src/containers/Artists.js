@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Loading from 'react-loading';
 import {connect} from 'react-redux';
 import {getArtists} from '../actions/generateContentActions';
 import { Link } from 'react-router';
@@ -29,7 +30,9 @@ class Artists extends Component {
   render() {
     if (!this.props.artists) {
       return (
-        <div>Artists...</div>
+        <div className="spinner" >
+          <Loading type='spin' color='#e3e3e3' />
+        </div>
       );
     }
     return (
