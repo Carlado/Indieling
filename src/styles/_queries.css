@@ -1,7 +1,104 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width:850px) {
+
+  .tracks-list {
+    width: 90%;
+  }
+  .track {
+    .trackname {
+      font-size: 100%;
+    }
+    img {
+      height: 40px;
+    }
+    .playbutton-tracks {
+      top: 20px;
+      left: 15px;
+      font-size: 120%;
+    }
+    .addbutton-tracks {
+      font-size: 120%;
+    }
+
+  }
   .topbar {
     .nav-item-text {
       display: none;
+    }
+  }
+  .top-tracks {
+    width: 80%;
+    .top-tracks-name {
+      font-size: 90%;
+
+    }
+  }
+
+  .player {
+    height: 90px;
+  }
+  .player-bottom-row {
+    display: block;
+    .player-song-info {
+      font-size: 85%;
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .player-controls {
+      display: inline-flex;
+      width: 50%;
+      padding-top: 10px;
+    }
+    .player-icon {
+      font-size: 140%;
+    }
+    .volume-control {
+      display: inline-flex;
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content-heading {
+    font-size: 120%;
+  }
+
+  .top-tracks {
+    width: 100%;
+    .top-tracks-name {
+      font-size: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .track {
+    .trackname {
+      width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .top-tracks-name {
+    width: 175px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .top-tracks-name {
+    width: 150px;
+  }
+
+  .track {
+    .trackname {
+      width: 150px;
     }
   }
 }

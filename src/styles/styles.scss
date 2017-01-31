@@ -317,6 +317,7 @@ ul {
   list-style: none;
   width: 80%;
   margin: 0 auto;
+  padding: 0;
 }
 
 .track {
@@ -401,7 +402,7 @@ ul {
   margin: 0 auto;
 }
 .top-tracks {
-  width: 50%;
+  width: 60%;
   margin: 50px auto;
   h3 {
     font-size: 110%;
@@ -506,7 +507,6 @@ ul {
 
 .player-bottom-row {
   display: flex;
-
   align-items: center;
   margin-top: 25px;
 }
