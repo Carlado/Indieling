@@ -15,6 +15,13 @@ export function addTrack(track) {
   }
 }
 
+export function addAlbum(tracks) {
+  return {
+    type: types.ADD_ALBUM,
+    payload: tracks
+  }
+}
+
 export function clearList() {
   return {
     type: types.CLEAR_LIST

@@ -10,6 +10,7 @@ const ArtistAlbums = (props) => {
           <img src={album.image} />
           <h3 className="content-heading">{album.name}</h3>
         </div>
+        <button className="default-button" onClick={() => props.addAlbum(album.tracks)}>Add to queue</button>
         <AlbumTracks tracks={album.tracks}/>
       </li>
     );

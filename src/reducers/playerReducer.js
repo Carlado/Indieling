@@ -1,4 +1,4 @@
-import {SET_TRACK, ADD_TRACK, CLEAR_LIST, INCREMENT_POSITION, REPLAY_LIST} from '../constants/actiontypes';
+import {SET_TRACK, ADD_TRACK, CLEAR_LIST, INCREMENT_POSITION, REPLAY_LIST, ADD_ALBUM} from '../constants/actiontypes';
 
 export function setTrackReducer(state= null, action) {
   switch(action.type) {
@@ -14,6 +14,8 @@ export function listReducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case ADD_TRACK :
       return { ...state, list: [...state.list, action.payload] };
+    case ADD_ALBUM :
+        return {...state, list: [...state.list, ...action.payload]};
     case CLEAR_LIST :
       return INITIAL_STATE;
     case INCREMENT_POSITION :

@@ -15,6 +15,7 @@ export const FETCH_ALBUM = 'FETCH_ALBUM';
 
 export const SET_TRACK = 'SET_TRACK';
 export const ADD_TRACK = 'ADD_TRACK';
+export const ADD_ALBUM = 'ADD_ALBUM';
 export const CLEAR_LIST = 'CLEAR_LIST';
 export const INCREMENT_POSITION = 'INCREMENT_POSITION';
 export const REPLAY_LIST = 'REPLAY_LIST';

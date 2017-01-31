@@ -9,11 +9,14 @@ class PlayList extends Component {
   listItems() {
     return this.props.list.list.map(track => {
       return (
-        <li key={track.id} className="track">
-          <img src={track.album_image} />
-          <div>
-            <p className="trackname" onClick={() => this.props.setTrack(track)}>{track.name}</p>
-            <Link className="trackartist" to={'/artist/' + track.artist_id}>{track.artist_name}</Link>
+        <li key={track.id} className="album-track-item">
+          <div className="click-play" onClick={() => this.props.setTrack(track)}>
+            <FontAwesome
+              className="nav-icon album-track-play"
+              name="play"
+              size="lg"
+              />
+            <span className="album-trackname">{track.name}</span>
           </div>
         </li>
       );
@@ -31,7 +34,7 @@ class PlayList extends Component {
           <button className="default-button" onClick={() => this.props.clearList()}>Clear queue</button>
           <button className="default-button" onClick={() => this.props.replayList()}>Play again</button>
         </div>
-        <ul className="list-tracks">{this.listItems()}</ul>
+        <ul className="album-tracks-list">{this.listItems()}</ul>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {getArtistTracks, getArtistInfo, getArtistAlbums} from '../actions/generateContentActions';
-import {setTrack, addTrack} from '../actions/playActions';
+import {setTrack, addTrack, addAlbum} from '../actions/playActions';
 import {connect} from 'react-redux';
 import ArtistTopTracks from '../components/ArtistTopTracks';
 import ArtistAlbums from '../components/ArtistAlbums';
@@ -41,7 +41,7 @@ class ArtistPage extends Component {
           tracks={tracks}
           setTrack={this.props.setTrack}
           addTrack={this.props.addTrack}/>
-        <ArtistAlbums albums={albums}/>
+        <ArtistAlbums albums={albums} addAlbum={this.props.addAlbum}/>
       </div>
     );
 
@@ -56,4 +56,4 @@ function mapStateTopProps(state) {
   }
 }
 
-export default connect(mapStateTopProps, {getArtistInfo, getArtistTracks, getArtistAlbums, setTrack, addTrack})(ArtistPage);
+export default connect(mapStateTopProps, {getArtistInfo, getArtistTracks, getArtistAlbums, setTrack, addTrack, addAlbum})(ArtistPage);

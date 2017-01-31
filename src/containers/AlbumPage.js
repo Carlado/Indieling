@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {fetchAlbum} from '../actions/generateContentActions';
+import {addAlbum} from '../actions/playActions';
 import {connect} from 'react-redux';
 import { Link } from 'react-router';
 import AlbumTracks from '../components/AlbumTracks';
@@ -30,6 +31,7 @@ class AlbumPage extends Component {
             <h3 className="content-heading">{album.name}</h3>
           </div>
           <p className="album-release">Released by <Link to={'/artist/' + album.artist_id}>{album.artist_name}</Link> on {album.releasedate}.</p>
+          <button className="default-button" onClick={() => this.props.addAlbum(album.tracks)}>Add to queue</button>
           <AlbumTracks tracks={album.tracks}/>
         </div>
       </div>
@@ -43,4 +45,4 @@ function mapStateTopProps(state) {
   }
 }
 
-export default connect(mapStateTopProps, {fetchAlbum})(AlbumPage);
+export default connect(mapStateTopProps, {fetchAlbum, addAlbum})(AlbumPage);
