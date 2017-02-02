@@ -1,4 +1,7 @@
 @media only screen and (max-width:850px) {
+  .searchbar {
+    width: 75%;
+  }
 
   .tracks-list {
     width: 90%;

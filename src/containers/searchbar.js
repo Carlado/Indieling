@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import FontAwesome from 'react-fontawesome';
 import {searchGetTracks, searchGetArtists, searchGetAlbums} from '../actions/searchActions';
 import smartOutline from 'smart-outline';
 
@@ -31,6 +32,7 @@ class SearchBar extends Component {
     return (
       <div>
         <form onSubmit={this.onFormSubmit} className="searchbar">
+          <button className="search-submit" type="submit"><FontAwesome className="nav-icon" name="search"/></button>
           <input value={this.state.term} onChange={this.onInputChange} />
         </form>
       </div>
