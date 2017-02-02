@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import {getTracks} from '../actions/generateContentActions';
 import {setTrack, addTrack} from '../actions/playActions';
+import Attribution from '../components/Attribution';
 
 import Dropdown from './TimeDropdown';
 
@@ -49,6 +50,7 @@ class Tracks extends Component {
     return (
       <div>
         <h3 className="view-heading">This hottest tracks of <Dropdown content="tracks"/> on Indieling.</h3>
+        <Attribution />
         <ul className="tracks-list">{this.listTracks()}</ul>
       </div>
     );

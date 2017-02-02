@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {getArtists} from '../actions/generateContentActions';
 import { Link } from 'react-router';
 import Dropdown from './TimeDropdown';
+import Attribution from '../components/Attribution';
 
 class Artists extends Component {
   componentWillMount() {
@@ -38,6 +39,7 @@ class Artists extends Component {
     return (
       <div>
         <h3 className="view-heading">This hottest artists of <Dropdown content="artists"/> on Indieling.</h3>
+        <Attribution />
         <ul className="artist-list">
           {this.listArtists()}
         </ul>

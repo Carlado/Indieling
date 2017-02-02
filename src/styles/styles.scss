@@ -233,8 +233,30 @@ ul {
 }
 
 
-
-
+/* ===============
+   ATTRIBUTION
+   =============== */
+.attribution {
+  width: 150px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  text-align: center;
+  img {
+    height: auto;
+    width: 40px;
+  }
+  span {
+    font-size: 80%;
+    font-style: italic;
+  }
+  a {
+    display: inline-block;
+    height: 30px;
+  }
+}
 
 /* ===============
    SEARCH

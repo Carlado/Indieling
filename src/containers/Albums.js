@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Loading from 'react-loading';
 import {connect} from 'react-redux';
 import { Link } from 'react-router';
-
+import Attribution from '../components/Attribution';
 import {getAlbums} from '../actions/generateContentActions';
 
 import Dropdown from './TimeDropdown';
@@ -41,6 +41,7 @@ class Albums extends Component {
     return (
       <div>
         <h3 className="view-heading">This hottest albums of <Dropdown content="albums"/> on Indieling.</h3>
+        <Attribution />
         <ul className="albums-list">{this.listAlbums()}</ul>
       </div>
     );
