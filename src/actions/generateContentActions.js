@@ -7,7 +7,7 @@ const KEY = config.KEY;
 const FORMAT = 'format=json';
 
 export function getArtists(duration) {
-  const request = axios.get(`${ROOT_URL}artists/?client_id=${KEY}&${FORMAT}&limit=20&order=popularity_${duration}`);
+  const request = axios.get(`${ROOT_URL}artists/?client_id=${KEY}&${FORMAT}&limit=18&order=popularity_${duration}`);
   return {
     type: types.GET_ARTISTS,
     payload: request
@@ -15,7 +15,7 @@ export function getArtists(duration) {
 }
 
 export function getTracks(duration) {
-  const request = axios.get(`${ROOT_URL}tracks/?client_id=${KEY}&${FORMAT}&limit=10&order=popularity_${duration}`);
+  const request = axios.get(`${ROOT_URL}tracks/?client_id=${KEY}&${FORMAT}&limit=12&order=popularity_${duration}`);
   return {
     type: types.GET_TRACKS,
     payload: request
@@ -23,7 +23,7 @@ export function getTracks(duration) {
 }
 
 export function getAlbums(duration) {
-  const request = axios.get(`${ROOT_URL}albums/?client_id=${KEY}&${FORMAT}&limit=10&imagesize=200&order=popularity_${duration}`);
+  const request = axios.get(`${ROOT_URL}albums/?client_id=${KEY}&${FORMAT}&limit=12&imagesize=200&order=popularity_${duration}`);
   return {
     type: types.GET_ALBUMS,
     payload: request
