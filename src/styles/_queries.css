@@ -102,3 +102,27 @@
     }
   }
 }
+
+
+/* Specific styling for the grid container*/
+@media screen and (max-width: 430px) {
+    .artist-list, .albums-list {
+        width:166px;
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 630px) {
+   .artist-list, .albums-list {
+        width:332px;
+    }
+}
+@media screen and (min-width: 631px) and (max-width: 830px) {
+   .artist-list, .albums-list {
+        width:498px;
+    }
+}
+@media screen and (min-width: 831px) and (max-width: 1030px) {
+   .artist-list, .albums-list {
+        width:664px;
+    }
+}

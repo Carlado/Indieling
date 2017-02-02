@@ -18,7 +18,7 @@ class Artists extends Component {
             <div className="artistbox">
             {artist.image ? <img src={artist.image} /> : <img src={require('../images/album.jpg')} />}
 
-            <p>{artist.name}</p>
+            <p className="artist-artistname">{artist.name}</p>
 
             </div>
           </Link>

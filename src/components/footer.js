@@ -4,8 +4,7 @@ import FontAwesome from 'react-fontawesome';
 const Footer = () => {
   return (
     <footer>
-      <p>Made with <FontAwesome name="heart" size="lg"/> in Stockholm, Sweden.</p>
-      <p>Crafted by Carlado.</p>
+      <p>Crafted and designed by Carlado.</p>
     </footer>
   );
 };

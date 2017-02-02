@@ -283,16 +283,17 @@ ul {
 
 .artist-list {
   list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  margin: 0 auto;
+  width: 996px;
   padding: 0;
   color: $clouds;
+
   li {
-    width: 170px;
+    display:inline-block;
+    width: 150px;
     height: 220px;
-    margin: 20px 6px;
+    margin: 10px 8px;
+    vertical-align: top;
     a, a:visited {
       text-decoration: none;
       color: $clouds;
@@ -302,9 +303,10 @@ ul {
       height: 150px;
       border-radius: 2px;
     }
-    p {
+    .artist-artistname {
       font-weight: 300;
       font-size: 100%;
+      margin-top: 2px;
     }
   }
 
@@ -384,12 +386,8 @@ ul {
 }
 
 .album-albumname {
-  margin-bottom: 2px;
-}
-
-.album-artistname {
-  margin: 0;
-  font-size: 50%;
+  font-weight: 300;
+  margin: 2px 0 0;
 }
 
 
