@@ -27,14 +27,14 @@ class Albums extends Component {
           </Link>
         </li>
       );
-    })
+    });
   }
 
   render() {
     if (!this.props.albums) {
       return (
         <div className="spinner" >
-          <Loading type='spin' color='#e3e3e3' />
+          <Loading type="spin" color="#e3e3e3" />
         </div>
       );
     }
@@ -48,10 +48,15 @@ class Albums extends Component {
   }
 }
 
+Albums.propTypes = {
+    getAlbums: React.PropTypes.func,
+    albums: React.PropTypes.object
+};
+
 function mapStateTopProps(state) {
   return {
     albums: state.albums
-  }
+  };
 }
 
 export default connect(mapStateTopProps, {getAlbums})(Albums);

@@ -145,8 +145,8 @@ class Player extends Component {
 Player.propTypes = {
     incrementPosition: React.PropTypes.func,
     setTrack: React.PropTypes.func,
-    list: React.PropTypes.obj,
-    track: React.PropTypes.obj
+    list: React.PropTypes.object,
+    track: React.PropTypes.object
 
 };
 

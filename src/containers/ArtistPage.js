@@ -24,7 +24,7 @@ class ArtistPage extends Component {
     if (!this.props.tracks || !this.props.info || !this.props.albums) {
       return (
         <div className="spinner" >
-          <Loading type='spin' color='#e3e3e3' />
+          <Loading type="spin" color="#e3e3e3" />
         </div>
       );
     }
@@ -40,6 +40,14 @@ class ArtistPage extends Component {
           <img className="content-image" src={info.image} />
           <h2 className="content-heading">{info.name}</h2>
         </div>
+        <div className="artist-attribution">
+          <a
+            target="_blank"
+            href={`https://www.jamendo.com/artist/${info.id}`}
+            rel="noopener noreferrer">
+            <button className="default-button">View on Jamendo</button>
+          </a>
+        </div>
         <ArtistTopTracks
           tracks={tracks}
           setTrack={this.props.setTrack}
@@ -51,12 +59,27 @@ class ArtistPage extends Component {
   }
 }
 
+ArtistPage.propTypes = {
+    getArtistTracks: React.PropTypes.func,
+    getArtistInfo: React.PropTypes.func,
+    getArtistAlbums: React.PropTypes.func,
+    setTrack: React.PropTypes.func,
+    addTrack: React.PropTypes.func,
+    addAlbum: React.PropTypes.func,
+    params: React.PropTypes.object,
+    tracks: React.PropTypes.object,
+    info: React.PropTypes.object,
+    albums: React.PropTypes.object
+};
+
 function mapStateTopProps(state) {
   return {
     tracks: state.artistTracks,
     info: state.artistInfo,
     albums: state.artistAlbums
-  }
+  };
 }
+
+
 
 export default connect(mapStateTopProps, {getArtistInfo, getArtistTracks, getArtistAlbums, setTrack, addTrack, addAlbum})(ArtistPage);

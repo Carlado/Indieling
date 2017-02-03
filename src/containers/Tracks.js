@@ -43,7 +43,7 @@ class Tracks extends Component {
     if (!this.props.tracks) {
       return (
         <div className="spinner" >
-          <Loading type='spin' color='#e3e3e3' />
+          <Loading type="spin" color="#e3e3e3" />
         </div>
       );
     }
@@ -56,6 +56,13 @@ class Tracks extends Component {
     );
   }
 }
+
+Tracks.propTypes = {
+    getTracks: React.PropTypes.func,
+    setTrack: React.PropTypes.func,
+    addTrack: React.PropTypes.func,
+    tracks: React.PropTypes.object
+};
 
 function mapStateTopProps(state) {
   return {

@@ -10,23 +10,30 @@ class SearchResults extends Component {
   render() {
     return (
       <div>
-        <SearchArtists artists={this.props.artistresults}/>
-        <SearchAlbums albums={this.props.albumresults}/>
+        <SearchArtists artists={this.props.artistResults}/>
+        <SearchAlbums albums={this.props.albumResults}/>
         <SearchTracks
-          tracks={this.props.trackresults}
+          tracks={this.props.trackResults}
           setTrack={this.props.setTrack}
           addTrack={this.props.addTrack}/>
       </div>
     );
   }
-
 }
+
+SearchResults.propTypes = {
+  setTrack: React.PropTypes.func,
+  addTrack: React.PropTypes.func,
+  albumResults: React.PropTypes.object,
+  trackResults: React.PropTypes.object,
+  artistResults: React.PropTypes.object,
+};
 
 function mapStatetoProps(state) {
   return {
-    trackresults: state.trackSearch,
-    artistresults: state.artistSearch,
-    albumresults: state.albumSearch
+    trackResults: state.trackSearch,
+    artistResults: state.artistSearch,
+    albumResults: state.albumSearch
   };
 }
 

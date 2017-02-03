@@ -25,14 +25,14 @@ class Artists extends Component {
           </Link>
         </li>
       );
-    })
+    });
   }
 
   render() {
     if (!this.props.artists) {
       return (
         <div className="spinner" >
-          <Loading type='spin' color='#e3e3e3' />
+          <Loading type="spin" color="#e3e3e3" />
         </div>
       );
     }
@@ -48,10 +48,17 @@ class Artists extends Component {
   }
 }
 
+Artists.propTypes = {
+    getArtists: React.PropTypes.func,
+    artists: React.PropTypes.object
+
+};
+
+
 function mapStateTopProps(state) {
   return {
     artists: state.artists
-  }
+  };
 }
 
 export default connect(mapStateTopProps, {getArtists})(Artists);

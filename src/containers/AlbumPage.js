@@ -39,10 +39,17 @@ class AlbumPage extends Component {
   }
 }
 
+AlbumPage.propTypes = {
+    fetchAlbum: React.PropTypes.func,
+    addAlbum: React.PropTypes.func,
+    params: React.PropTypes.object,
+    album: React.PropTypes.object
+};
+
 function mapStateTopProps(state) {
   return {
     album: state.album
-  }
+  };
 }
 
 export default connect(mapStateTopProps, {fetchAlbum, addAlbum})(AlbumPage);
