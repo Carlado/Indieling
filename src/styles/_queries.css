@@ -1,3 +1,5 @@
+
+/* General for tablets and phones */
 @media only screen and (max-width:850px) {
   .searchbar {
     width: 75%;
@@ -20,6 +22,7 @@
     }
     .addbutton-tracks {
       font-size: 120%;
+      top: 20px;
     }
 
   }
@@ -30,6 +33,7 @@
   }
   .top-tracks {
     width: 80%;
+    margin-top: 25px;
     .top-tracks-name {
       font-size: 90%;
 
@@ -49,6 +53,8 @@
       text-align: center;
     }
     .player-controls {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       width: 50%;
       padding-top: 10px;
@@ -57,12 +63,15 @@
       font-size: 140%;
     }
     .volume-control {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       width: 50%;
     }
   }
 }
 
+/* Mobile */
 @media only screen and (max-width: 480px) {
   .content-heading {
     font-size: 120%;
@@ -76,6 +85,7 @@
   }
 }
 
+/* Ellipsis for names */
 @media only screen and (max-width: 420px) {
   .track {
     .trackname {
@@ -94,6 +104,7 @@
   }
 }
 
+/* Shorter ellipsis */
 @media only screen and (max-width: 350px) {
   .top-tracks-name {
     width: 150px;

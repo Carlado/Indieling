@@ -1,26 +1,23 @@
 /* ===============
    VARIABLES
    =============== */
-
 $theme: #14181d;
 $details: #00ADB5;
 $silver: #222831;
 $silver-light: #4c596d;
 $clouds: #ecf0f1;
 $hover-red: #e74c3c;
-
 /* ===============
    GENERAL SETTINGS
    =============== */
-
 html {
   box-sizing: border-box;
   font-size: 16px;
   font-family: 'Lato', sans-serif;
 }
 
-html,
-body {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -28,8 +25,8 @@ body {
 }
 
 *,
-*:before,
-*:after {
+*:after,
+*:before {
   box-sizing: inherit;
 }
 
@@ -46,11 +43,9 @@ ul {
 .fa-lg {
   line-height: 1em;
 }
-
 /* ===============
    REUSABLES
    =============== */
-
 .spinner {
   position: fixed;
   top: 0;
@@ -90,6 +85,7 @@ ul {
   font-size: 75%;
   font-weight: 300;
   letter-spacing: 1px;
+
   &:hover {
     background: $details;
   }
@@ -102,8 +98,12 @@ ul {
 }
 
 .content-top-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 20px;
 }
 
@@ -116,12 +116,14 @@ ul {
 
 .click-play {
   cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-//Dropdown used for sorting content
-
+/*Dropdown used for sorting content*/
 .time-dropdown {
   background: $silver;
   color: white;
@@ -130,15 +132,11 @@ ul {
   border-radius: 2px;
   padding: 1px 2px;
   margin: 0 1px;
-
 }
-
-
-
-//Each album item including tracks, see reusable template in AlbumPage
-
+/*Each album item including tracks, see reusable template in AlbumPage*/
 .album-item {
   padding: 30px 0;
+
   button {
     margin-top: 20px;
   }
@@ -154,6 +152,7 @@ ul {
   border-bottom: 1px solid #536177;
   position: relative;
 }
+
 .album-position {
   margin-right: 15px;
 }
@@ -165,8 +164,10 @@ ul {
 .album-track-play {
   color: $details;
   margin-right: 15px;
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
   cursor: pointer;
+
   &:hover {
     color: $hover-red;
   }
@@ -175,18 +176,18 @@ ul {
 .addbutton-album {
   position: absolute;
   right: 2px;
+  top: 10px;
   color: $silver-light;
   cursor: pointer;
+
   &:hover {
     color: $hover-red;
   }
-
 }
 
 .album-heading-box {
   @extend .content-top-box;
 }
-
 /* ===============
    TOPBAR
    =============== */
@@ -206,58 +207,79 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+
   li {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+
     .nav-icon {
       margin-right: 10px;
     }
   }
-  a, a:visited {
+
+  a,
+  a:visited {
     display: inline-block;
     width: 100%;
     text-align: center;
     padding: 0 10px;
     color: white;
     text-decoration: none;
+    -webkit-transition: background 0.2s;
     transition: background 0.2s;
+
     &:hover {
       background: $details;
     }
   }
+
   .active {
     background: $details;
   }
 }
-
-
 /* ===============
    ATTRIBUTION
    =============== */
 .attribution {
   width: 150px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 10px;
   text-align: center;
+
   img {
     height: auto;
     width: 40px;
   }
+
   span {
     font-size: 80%;
     font-style: italic;
   }
+
   a {
     display: inline-block;
     height: 30px;
   }
 }
-
 /* ===============
    SEARCH
    =============== */
@@ -273,6 +295,7 @@ ul {
   width: 50%;
   margin: 50px auto 0;
   position: relative;
+
   input {
     width: 100%;
     border: none;
@@ -281,8 +304,8 @@ ul {
     font-size: 130%;
     color: $clouds;
     background: $silver;
-
   }
+
   .search-submit {
     position: absolute;
     top: 10px;
@@ -292,7 +315,6 @@ ul {
     background: transparent;
     border: 0;
     color: $clouds;
-
   }
 }
 
@@ -305,17 +327,14 @@ ul {
   margin: 0;
   letter-spacing: 1px;
   margin-bottom: 30px;
-
 }
 
 .album-hr {
   margin-top: 30px;
 }
-
 /* ===============
    ARTISTS PAGE (LIST)
    =============== */
-
 .artist-list {
   list-style: none;
   margin: 0 auto;
@@ -324,29 +343,31 @@ ul {
   color: $clouds;
 
   li {
-    display:inline-block;
+    display: inline-block;
     width: 150px;
     height: 220px;
     margin: 10px 8px;
     vertical-align: top;
-    a, a:visited {
+
+    a,
+    a:visited {
       text-decoration: none;
       color: $clouds;
     }
+
     img {
       width: 150px;
       height: 150px;
       border-radius: 2px;
     }
+
     .artist-artistname {
       font-weight: 300;
       font-size: 100%;
       margin-top: 2px;
     }
   }
-
 }
-
 /* ===============
    TRACKS PAGE
    =============== */
@@ -361,38 +382,51 @@ ul {
   color: $clouds;
   border-bottom: 1px solid #536177;
   padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
+
   &:last-child {
     border: 0;
   }
+
   img {
     height: 60px;
     width: auto;
   }
+
   .playbutton-tracks {
     position: absolute;
     top: 25px;
     left: 19px;
     color: $details;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
     cursor: pointer;
+
     &:hover {
       color: $hover-red;
     }
   }
+
   div {
     display: inline-block;
     padding-left: 30px;
   }
+
   .trackname {
     font-size: 120%;
     font-weight: 300;
     margin: 0;
     cursor: pointer;
   }
-  .trackartist, .trackartist:visited {
+
+  .trackartist,
+  .trackartist:visited {
     font-size: 90%;
     margin: 0;
     text-decoration: none;
@@ -402,20 +436,20 @@ ul {
 
 .addbutton-tracks {
   position: absolute;
+  top: 25px;
   right: 5px;
   color: $silver-light;
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
   cursor: pointer;
+
   &:hover {
     color: $hover-red;
   }
-
 }
-
 /* ===============
    ALBUMS PAGE (LIST)
    =============== */
-
 .albums-list {
   @extend .artist-list;
 }
@@ -424,19 +458,30 @@ ul {
   font-weight: 300;
   margin: 2px 0 0;
 }
-
-
 /* ===============
    ARTIST PAGE (INDIVIDUAL)
    =============== */
-
 .artist-page {
   width: 90%;
   margin: 0 auto;
 }
+
+.artist-attribution {
+  padding-top: 20px;
+  font-size: 90%;
+  display: flex;
+  align-items: center;
+  img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+  }
+}
+
 .top-tracks {
   width: 60%;
   margin: 50px auto;
+
   h3 {
     font-size: 110%;
   }
@@ -445,10 +490,15 @@ ul {
     list-style: none;
     padding: 0;
   }
+
   .top-tracks-item {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 1px 0;
     border-bottom: 1px solid #536177;
   }
@@ -458,64 +508,65 @@ ul {
     height: auto;
     margin-right: 10px;
   }
-  .rating {    display: inline-block;
+
+  .rating {
+    display: inline-block;
     width: 20px;
     height: 20px;
   }
+
   .playbutton-top {
     position: absolute;
     left: 15px;
     color: $details;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
+
     &:hover {
       color: $hover-red;
     }
   }
-
 }
 
 .album-list {
   padding: 0;
   list-style: none;
+
   ul {
     list-style: none;
   }
 }
-
-
-
 /* ===============
    ALBUM PAGE (INDIVIDUAL)
    =============== */
 .album-page {
   @extend .artist-page;
-
 }
 
 .album-release {
   margin-bottom: 0;
   font-size: 90%;
-  a, a:visited {
+
+  a,
+  a:visited {
     text-decoration: none;
     color: $details;
   }
+
   a:hover {
     color: $hover-red;
   }
 }
-
-//Uses track styling from reusables
-
-
+/*Uses track styling from reusables*/
 /* ===============
    PLAYER
    =============== */
 .player {
   width: 100%;
-  position:fixed;
-  left:0px;
-  bottom:0px;
-  height:80px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 80px;
   background: $theme;
 }
 
@@ -539,17 +590,21 @@ ul {
 }
 
 .player-bottom-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 25px;
 }
-
 
 .song-length {
   color: $clouds;
 }
 
-.duration-time, .current-time {
+.current-time,
+.duration-time {
   position: absolute;
   margin-top: 5px;
 }
@@ -557,20 +612,29 @@ ul {
 .duration-time {
   right: 5px;
 }
+
 .current-time {
   left: 5px;
 }
 
 .player-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 33.333333%;
 }
 
 .volume-control {
   width: 33.333333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .player-song-info {
@@ -581,89 +645,100 @@ ul {
 .player-icon {
   margin: 0 20px;
   cursor: pointer;
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
+
   &:hover {
     color: $hover-red;
   }
 }
-
-
 /* ===============
    PLAYLIST (QUEUE)
    =============== */
 .playlist-controls {
   padding: 20px 0;
   text-align: center;
+
   button {
     text-align: center;
     margin: 0 10px;
-
   }
 }
-
 /* ===============
    FOOTER
    =============== */
-
 footer {
   background: $theme;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+
   p {
     margin: 0;
     text-align: center;
   }
+
   span {
     color: $hover-red;
     padding: 0 5px;
   }
 }
-
 /* ===============
    INPUT RANGE
    =============== */
+.InputRange-slider {
+  display: none;
+}
 
-   .InputRange-slider {
-     display: none;
-   }
-   .InputRange-sliderContainer {
-     transition: left 0.3s ease-out; }
+.InputRange-sliderContainer {
+  -webkit-transition: left 0.3s ease-out;
+  transition: left 0.3s ease-out;
+}
 
-   .InputRange-label {
-     display: none}
+.InputRange-label {
+  display: none;
+}
 
+.InputRange-track {
+  background: #eeeeee;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: block;
+  height: 0.3rem;
+  position: relative;
+  -webkit-transition: left 0.3s ease-out, width 0.3s ease-out;
+  transition: left 0.3s ease-out, width 0.3s ease-out;
+}
 
-   .InputRange-track {
-     background: #eeeeee;
-     border-radius: 0.3rem;
-     cursor: pointer;
-     display: block;
-     height: 0.3rem;
-     position: relative;
-     transition: left 0.3s ease-out, width 0.3s ease-out; }
-     .InputRange.is-disabled .InputRange-track {
-       background: #eeeeee; }
+.InputRange.is-disabled .InputRange-track {
+  background: #eeeeee;
+}
 
-   .InputRange-track--container {
-     left: 0;
-     margin-top: -0.15rem;
-     position: absolute;
-     right: 0;
-     top: 50%; }
+.InputRange-track--container {
+  left: 0;
+  margin-top: -0.15rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
 
-   .InputRange-track--active {
-     background: $details; }
+.InputRange-track--active {
+  background: $details;
+}
 
-   .InputRange {
-     position: relative;
-     width: 100%;
-     height: 1rem;
-    }
-
+.InputRange {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+}
 /* ===============
   IMPORT QUERIES
   =============== */
-
 @import 'queries';
