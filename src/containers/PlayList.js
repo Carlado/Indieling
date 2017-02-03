@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {clearList, replayList, setTrack} from '../actions/playActions';
 import FontAwesome from 'react-fontawesome';
-import { Link } from 'react-router';
 
 class PlayList extends Component {
 
@@ -25,9 +24,8 @@ class PlayList extends Component {
 
   render() {
     if (!this.props.list) {
-      return <div>Hiii</div>
+      return <div />;
     }
-    console.log(this.props.list);
     return (
       <div>
         <div className="playlist-controls">
@@ -38,13 +36,19 @@ class PlayList extends Component {
       </div>
     );
   }
-
 }
+
+PlayList.propTypes = {
+    clearList: React.PropTypes.func,
+    setTrack: React.PropTypes.func,
+    replayList: React.PropTypes.func,
+    list: React.PropTypes.obj
+};
 
 function mapStateTopProps(state) {
   return {
     list: state.list
-  }
+  };
 }
 
 export default connect(mapStateTopProps, {clearList, replayList, setTrack})(PlayList);

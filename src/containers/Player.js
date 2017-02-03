@@ -44,7 +44,7 @@ class Player extends Component {
   }
 
   handlePlaying(audio) {
-    this.setState({position: audio.position})
+    this.setState({position: audio.position});
   }
 
   nextSong() {
@@ -67,7 +67,7 @@ class Player extends Component {
 
   render() {
     if (!this.props.track) {
-      return <div />
+      return <div />;
     }
 
     const {track} = this.props;
@@ -142,11 +142,19 @@ class Player extends Component {
   }
 }
 
+Player.propTypes = {
+    incrementPosition: React.PropTypes.func,
+    setTrack: React.PropTypes.func,
+    list: React.PropTypes.obj,
+    track: React.PropTypes.obj
+
+};
+
 function mapStateTopProps(state) {
   return {
     track: state.currentTrack,
     list: state.list
-  }
+  };
 }
 
 export default connect(mapStateTopProps, {setTrack, incrementPosition})(Player);
