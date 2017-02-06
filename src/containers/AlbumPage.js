@@ -27,7 +27,7 @@ class AlbumPage extends Component {
       <div className="album-page">
         <div className="album-item">
           <div className="album-heading-box">
-            <img src={album.image} />
+            <img className="content-image" src={album.image} />
             <h3 className="content-heading">{album.name}</h3>
           </div>
           <p className="album-release">Released by <Link to={'/artist/' + album.artist_id}>{album.artist_name}</Link> on {album.releasedate}.</p>
