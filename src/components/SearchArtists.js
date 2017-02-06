@@ -31,5 +31,9 @@ const SearchArtists = (props) => {
   );
 };
 
+SearchArtists.propTypes = {
+  artists: React.PropTypes.object
+};
+
 
 export default SearchArtists;

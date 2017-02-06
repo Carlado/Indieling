@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 
 const SearchTracks = (props) => {
-  console.log(props);
   if (!props.tracks) {
     return <div/>;
   }
@@ -38,6 +37,10 @@ const SearchTracks = (props) => {
       <ul className="tracks-list">{tracksList}</ul>
     </div>
   );
+};
+
+SearchTracks.propTypes = {
+  tracks: React.PropTypes.object
 };
 
 

@@ -8,10 +8,10 @@ const Attribution = () => {
         target="_blank"
         href="https://jamendo.com"
         rel="noopener noreferrer">
-        <img src={'../images/jamendo.png'} />
+        <img src={require('../images/jamendo.png')} />
       </a>
     </div>
   );
-}
+};
 
 export default Attribution;

@@ -11,7 +11,7 @@ export function getArtists(duration) {
   return {
     type: types.GET_ARTISTS,
     payload: request
-  }
+  };
 }
 
 export function getTracks(duration) {
@@ -19,7 +19,7 @@ export function getTracks(duration) {
   return {
     type: types.GET_TRACKS,
     payload: request
-  }
+  };
 }
 
 export function getAlbums(duration) {
@@ -27,7 +27,7 @@ export function getAlbums(duration) {
   return {
     type: types.GET_ALBUMS,
     payload: request
-  }
+  };
 }
 
 export function getArtistTracks(id) {
@@ -35,7 +35,7 @@ export function getArtistTracks(id) {
   return {
     type: types.GET_ARTIST_TRACKS,
     payload: request
-  }
+  };
 }
 
 
@@ -45,7 +45,7 @@ export function getArtistInfo(id) {
   return {
     type: types.GET_ARTIST_INFO,
     payload: request
-  }
+  };
 }
 
 export function getArtistAlbums(id) {
@@ -53,7 +53,7 @@ export function getArtistAlbums(id) {
   return {
     type: types.GET_ARTIST_ALBUMS,
     payload: request
-  }
+  };
 }
 
 export function fetchAlbum(id) {
@@ -61,5 +61,5 @@ export function fetchAlbum(id) {
   return {
     type: types.FETCH_ALBUM,
     payload: request
-  }
+  };
 }

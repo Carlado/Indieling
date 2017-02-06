@@ -58,10 +58,10 @@ class Tracks extends Component {
 }
 
 Tracks.propTypes = {
-    getTracks: React.PropTypes.func,
-    setTrack: React.PropTypes.func,
-    addTrack: React.PropTypes.func,
-    tracks: React.PropTypes.object
+  getTracks: React.PropTypes.func,
+  setTrack: React.PropTypes.func,
+  addTrack: React.PropTypes.func,
+  tracks: React.PropTypes.object
 };
 
 function mapStateTopProps(state) {

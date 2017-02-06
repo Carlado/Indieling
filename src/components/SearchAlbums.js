@@ -28,5 +28,9 @@ const SearchAlbums = (props) => {
   );
 };
 
+SearchAlbums.propTypes = {
+  albums: React.PropTypes.object
+};
+
 
 export default SearchAlbums;

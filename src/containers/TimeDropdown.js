@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getAlbums, getArtists, getTracks} from '../actions/generateContentActions';
 
-
-class TimeDropdown extends Component  {
+class TimeDropdown extends Component {
   sendValue() {
     const duration = document.querySelector('.time-dropdown').value;
     //Pass down context as props from parent.
@@ -30,5 +29,12 @@ class TimeDropdown extends Component  {
   }
 
 }
+
+TimeDropdown.propTypes = {
+  getArtists: React.PropTypes.func,
+  getTracks: React.PropTypes.func,
+  getAlbums: React.PropTypes.func,
+  content: React.PropTypes.string
+};
 
 export default connect(null, {getArtists, getTracks, getAlbums})(TimeDropdown);

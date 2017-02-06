@@ -15,11 +15,11 @@ class Albums extends Component {
   listAlbums() {
     return this.props.albums.results.map((album) => {
       return (
-        <li key={album.id}>
+        <li key={album.id} className="artist-album-item">
           <Link to={'/album/' + album.id}>
             <div className="artistbox">
               {album.image ? <img src={album.image} /> : <img src={require('../images/album.jpg')} />}
-              <div>
+              <div className="artist-album-namebox">
                 <p className="album-albumname">{album.name}</p>
                 <span>{album.artist_name}</span>
               </div>
