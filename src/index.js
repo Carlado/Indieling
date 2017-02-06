@@ -4,10 +4,9 @@ import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 import configureStore from './store/configureStore';
-require('./favicon.ico'); // Tell webpack to load favicon.ico
-import './styles/styles.scss';
 import { syncHistoryWithStore } from 'react-router-redux';
 import './styles/styles.scss';
+import './images/favicon.ico';
 const store = configureStore();
 
 // Create an enhanced history that syncs navigation events with the store
