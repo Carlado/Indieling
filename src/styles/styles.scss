@@ -391,7 +391,7 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-
+  transition: background 0.2s;
   &:last-child {
     border: 0;
   }
