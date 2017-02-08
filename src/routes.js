@@ -13,8 +13,8 @@ import PlayList from './containers/PlayList';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={Artists} />
-    <Route path="/tracks" component={Tracks} />
+    <IndexRoute component={Tracks} />
+    <Route path="/artists" component={Artists} />
     <Route path="/albums" component={Albums} />
     <Route path="/search" component={Search} />
     <Route path="/playlist" component={PlayList} />
