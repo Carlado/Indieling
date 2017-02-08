@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import Topbar from './topbar';
-import Footer from './footer';
+import Topbar from './Topbar';
+import Footer from './Footer';
 import Player from '../containers/Player';
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from '../containers/searchbar';
+import SearchBar from '../containers/SearchBar';
 import SearchResults from '../containers/SearchResults';
 import Attribution from './Attribution';
 

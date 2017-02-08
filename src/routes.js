@@ -2,7 +2,7 @@ import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 
 import App from './components/app';
-import Search from './components/search';
+import Search from './components/Search';
 import Artists from './containers/Artists';
 import Tracks from './containers/Tracks';
 import Albums from './containers/Albums';

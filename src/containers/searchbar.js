@@ -9,7 +9,7 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {term: ''};
-    //Smart outline to preserve focus when keyboard is used to preserve accessibility
+    //Smart outline to preserve focus when keyboard is used
     smartOutline.init();
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
