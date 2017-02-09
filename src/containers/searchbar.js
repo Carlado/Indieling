@@ -4,7 +4,6 @@ import FontAwesome from 'react-fontawesome';
 import {searchGetTracks, searchGetArtists, searchGetAlbums} from '../actions/searchActions';
 import smartOutline from 'smart-outline';
 
-
 class SearchBar extends Component {
   constructor(props) {
     super(props);
