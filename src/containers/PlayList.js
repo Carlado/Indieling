@@ -6,7 +6,7 @@ import FontAwesome from 'react-fontawesome';
 class PlayList extends Component {
 
   listItems() {
-    return this.props.list.list.map(track => {
+    return this.props.list.items.map(track => {
       return (
         <li key={track.id} className="album-track-item">
           <div className="click-play" onClick={() => this.props.setTrack(track)}>

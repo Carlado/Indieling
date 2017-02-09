@@ -8,14 +8,14 @@ export function setTrackReducer(state= null, action) {
   return state;
 }
 
-const INITIAL_STATE = {list: [], listPosition: 0};
+const INITIAL_STATE = {items: [], listPosition: 0};
 
 export function listReducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case ADD_TRACK :
-      return { ...state, list: [...state.list, action.payload] };
+      return { ...state, items: [...state.items, action.payload] };
     case ADD_ALBUM :
-        return {...state, list: [...state.list, ...action.payload]};
+        return {...state, items: [...state.items, ...action.payload]};
     case CLEAR_LIST :
       return INITIAL_STATE;
     case INCREMENT_POSITION :
