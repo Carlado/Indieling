@@ -48,10 +48,10 @@ class Player extends Component {
   }
 
   nextSong() {
-    const {list} = this.props.list;
+    const {items} = this.props.list;
 
-    if (list.length > this.props.list.listPosition) {
-      this.props.setTrack(list[this.props.list.listPosition]);
+    if (items.length > this.props.list.listPosition) {
+      this.props.setTrack(items[this.props.list.listPosition]);
       this.props.incrementPosition();
     }
 
