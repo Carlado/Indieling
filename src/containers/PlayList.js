@@ -42,7 +42,7 @@ PlayList.propTypes = {
     clearList: React.PropTypes.func,
     setTrack: React.PropTypes.func,
     replayList: React.PropTypes.func,
-    list: React.PropTypes.obj
+    list: React.PropTypes.object
 };
 
 function mapStateTopProps(state) {
