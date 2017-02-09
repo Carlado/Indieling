@@ -35,7 +35,7 @@ const ArtistTopTracks = (props) => {
 };
 
 ArtistTopTracks.propTypes = {
-  tracks: React.PropTypes.object
+  tracks: React.PropTypes.array
 };
 
 export default ArtistTopTracks;

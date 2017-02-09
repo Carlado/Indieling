@@ -26,7 +26,7 @@ const ArtistAlbums = (props) => {
 };
 
 ArtistAlbums.propTypes = {
-  albums: React.PropTypes.object
+  albums: React.PropTypes.array
 };
 
 export default ArtistAlbums;

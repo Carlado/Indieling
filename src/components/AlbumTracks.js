@@ -43,7 +43,7 @@ class AlbumTracks extends Component {
 AlbumTracks.propTypes = {
   setTrack: React.PropTypes.func,
   addTrack: React.PropTypes.func,
-  tracks: React.PropTypes.object
+  tracks: React.PropTypes.array
 };
 
 export default connect(null, {setTrack, addTrack})(AlbumTracks);
