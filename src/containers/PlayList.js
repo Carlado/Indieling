@@ -28,6 +28,7 @@ class PlayList extends Component {
     }
     return (
       <div>
+        <h3 className="view-heading">Queue</h3>
         <div className="playlist-controls">
           <button className="default-button" onClick={() => this.props.clearList()}>Clear queue</button>
           <button className="default-button" onClick={() => this.props.replayList()}>Play again</button>
