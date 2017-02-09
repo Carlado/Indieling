@@ -43,7 +43,7 @@ class SearchBar extends Component {
 SearchBar.propTypes = {
   searchGetTracks: React.PropTypes.func,
   searchGetArtists: React.PropTypes.func,
-  searchGetAlbums: React.PropTypes.func,
+  searchGetAlbums: React.PropTypes.func
 };
 
 export default connect(null, {searchGetTracks, searchGetArtists, searchGetAlbums})(SearchBar);
