@@ -1,5 +1,5 @@
 import React from 'react';
-import AlbumTracks from './AlbumTracks';
+import AlbumTracks from '../containers/AlbumTracks';
 
 const ArtistAlbums = (props) => {
 

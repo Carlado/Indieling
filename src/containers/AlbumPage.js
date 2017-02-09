@@ -3,7 +3,7 @@ import {fetchAlbum} from '../actions/generateContentActions';
 import {addAlbum} from '../actions/playActions';
 import {connect} from 'react-redux';
 import { Link } from 'react-router';
-import AlbumTracks from '../components/AlbumTracks';
+import AlbumTracks from './AlbumTracks';
 
 class AlbumPage extends Component {
   componentDidMount() {
