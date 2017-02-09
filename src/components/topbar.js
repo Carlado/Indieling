@@ -11,7 +11,9 @@ const Topbar = () => {
         <li><Link to="/albums" activeClassName="active"><FontAwesome className="nav-icon" name="circle-o" size="lg"/><span className="nav-item-text">Albums</span></Link></li>
         <li><Link to="/search" activeClassName="active"><FontAwesome className="nav-icon" name="search" size="lg"/><span className="nav-item-text">Search</span></Link></li>
         <li><Link to="/playlist" activeClassName="active"><FontAwesome className="nav-icon" name="list" size="lg"/><span className="nav-item-text">Queue</span></Link></li>
+
       </ul>
+
     </div>
   );
 };
