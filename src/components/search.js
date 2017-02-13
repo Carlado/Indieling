@@ -5,12 +5,12 @@ import Attribution from './Attribution';
 
 const Search = () => {
   return (
-    <div>
+    <section>
       <h3 className="search-heading">Search for artists, tracks or albums</h3>
       <Attribution />
       <SearchBar />
       <SearchResults />
-    </div>
+    </section>
   );
 };
 

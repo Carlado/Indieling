@@ -22,11 +22,11 @@ const SearchAlbums = (props) => {
   });
 
   return (
-    <div className="search-category">
+    <article className="search-category">
       <h3 className="search-category-heading">Albums:</h3>
       <ul className="albums-list">{albumList}</ul>
       <hr className="album-hr" />
-    </div>
+    </article>
   );
 };
 

@@ -35,7 +35,7 @@ class ArtistPage extends Component {
 
 
     return (
-      <div className="artist-page">
+      <section className="artist-page">
         <div className="content-top-box">
           <img className="content-image" src={info.image} />
           <h2 className="content-heading">{info.name}</h2>
@@ -53,7 +53,7 @@ class ArtistPage extends Component {
           setTrack={this.props.setTrack}
           addTrack={this.props.addTrack}/>
         <ArtistAlbums albums={albums} addAlbum={this.props.addAlbum}/>
-      </div>
+      </section>
     );
 
   }

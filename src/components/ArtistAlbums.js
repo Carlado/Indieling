@@ -17,11 +17,11 @@ const ArtistAlbums = (props) => {
   });
 
   return (
-    <div>
+    <section>
       <h3>Albums</h3>
       <hr/>
       <ul className="album-list">{albumList}</ul>
-    </div>
+    </section>
   );
 };
 

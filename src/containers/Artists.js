@@ -21,7 +21,7 @@ class Artists extends Component {
 
             <div className="artist-album-namebox">
               <p className="artist-artistname">{artist.name}</p>
-            </div>  
+            </div>
 
             </div>
           </Link>
@@ -39,13 +39,13 @@ class Artists extends Component {
       );
     }
     return (
-      <div>
+      <section>
         <h3 className="view-heading">This hottest artists of <Dropdown content="artists"/> on Indieling.</h3>
         <Attribution />
         <ul className="artist-list">
           {this.listArtists()}
         </ul>
-      </div>
+      </section>
     );
   }
 }

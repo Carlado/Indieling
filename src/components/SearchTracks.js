@@ -32,10 +32,10 @@ const SearchTracks = (props) => {
   });
 
   return (
-    <div className="search-category">
+    <article className="search-category">
       <h3 className="search-category-heading">Tracks:</h3>
       <ul className="tracks-list">{tracksList}</ul>
-    </div>
+    </article>
   );
 };
 

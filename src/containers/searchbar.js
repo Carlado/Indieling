@@ -30,12 +30,12 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
+      <section>
         <form onSubmit={this.onFormSubmit} className="searchbar">
           <button className="search-submit" type="submit"><FontAwesome className="nav-icon" name="search"/></button>
           <input value={this.state.term} onChange={this.onInputChange} />
         </form>
-      </div>
+      </section>
     );
   }
 }

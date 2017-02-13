@@ -24,8 +24,8 @@ class AlbumPage extends Component {
     const album = this.props.album.results[0];
 
     return (
-      <div className="album-page">
-        <div className="album-item">
+      <section className="album-page">
+        <article className="album-item">
           <div className="album-heading-box">
             <img className="content-image" src={album.image} />
             <h3 className="content-heading">{album.name}</h3>
@@ -33,8 +33,8 @@ class AlbumPage extends Component {
           <p className="album-release">Released by <Link to={'/artist/' + album.artist_id}>{album.artist_name}</Link> on {album.releasedate}.</p>
           <button className="default-button" onClick={() => this.props.addAlbum(album.tracks)}>Add to queue</button>
           <AlbumTracks tracks={album.tracks}/>
-        </div>
-      </div>
+        </article>
+      </section>
     );
   }
 }

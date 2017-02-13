@@ -4,7 +4,7 @@ import { Link, IndexLink } from 'react-router';
 
 const Topbar = () => {
   return (
-    <div className="topbar">
+    <nav className="topbar">
       <ul className="nav-items">
         <li><IndexLink to="/" activeClassName="active"><FontAwesome className="nav-icon" name="music" size="lg"/><span className="nav-item-text">Tracks</span></IndexLink></li>
         <li><Link to="/artists" activeClassName="active"><FontAwesome className="nav-icon" name="leaf" size="lg"/><span className="nav-item-text">Artists</span></Link></li>
@@ -14,7 +14,7 @@ const Topbar = () => {
 
       </ul>
 
-    </div>
+    </nav>
   );
 };
 

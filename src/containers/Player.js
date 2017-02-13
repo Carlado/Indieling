@@ -73,7 +73,7 @@ class Player extends Component {
     const {track} = this.props;
 
     return (
-      <div className="player">
+      <section className="player">
         <div className="position-slider">
           <InputRange
           maxValue={Math.ceil(Number(track.duration))}
@@ -137,7 +137,7 @@ class Player extends Component {
         />
 
 
-      </div>
+      </section>
     );
   }
 }

@@ -7,14 +7,14 @@ import Player from '../containers/Player';
 class App extends Component {
   render() {
     return (
-      <div>
+      <main>
         <Topbar />
         <div className="app-window">
           {this.props.children}
         </div>
         <Player />
         <Footer />
-      </div>
+      </main>
 
     );
   }

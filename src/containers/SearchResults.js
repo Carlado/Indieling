@@ -9,14 +9,14 @@ import SearchAlbums from '../components/SearchAlbums';
 class SearchResults extends Component {
   render() {
     return (
-      <div>
+      <section>
         <SearchArtists artists={this.props.artistResults}/>
         <SearchAlbums albums={this.props.albumResults}/>
         <SearchTracks
           tracks={this.props.trackResults}
           setTrack={this.props.setTrack}
           addTrack={this.props.addTrack}/>
-      </div>
+      </section>
     );
   }
 }
