@@ -76,6 +76,9 @@
 /* Mobile */
 
 @media only screen and (max-width: 480px) {
+  .app-window {
+    padding: 50px 10px;
+  }
   .content-heading {
     font-size: 120%;
   }
@@ -164,6 +167,20 @@
   }
   .album-albumname, .artist-artistname {
     width: 150px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .top-tracks-name {
+    width: 135px;
+  }
+  .track {
+    .trackname {
+      width: 135px;
+    }
+  }
+  .album-albumname, .artist-artistname {
+    width: 135px;
   }
 }
 
